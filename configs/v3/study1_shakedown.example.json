@@ -1,0 +1,14 @@
+{
+  "base_url": "https://localhost:5001/v1/api",
+  "batch_size": 8,
+  "contracts_per_market": 8,
+  "gap_multiplier": 1.75,
+  "market_name_pattern": "(?i)(temperature.*high|high.*temperature)",
+  "max_markets_per_session": 24,
+  "provisional_cadence_seconds": 30.0,
+  "rotation_modulus": 3,
+  "rule_audit_contract_limit": 0,
+  "snapshot_prime_delay_seconds": 0.75,
+  "status": "SHAKEDOWN_REFERENCE_ONLY_LONG_RUN_COMPLETE",
+  "tickle_interval_seconds": 60.0
+}

@@ -1,0 +1,170 @@
+{
+  "protocol_id": "v3_study1_structural_consistency_frozen_2026-10-06_r1",
+  "status": "FINAL_FROZEN_CONFIRMATORY_NOT_STARTED",
+  "freeze_parent_commit": "b698f85c63858ae372d918118c4f1cb822fd4cb7",
+  "pre_freeze_acceptance_evidence": {
+    "date": "2026-10-06",
+    "run_id": "20261006T151123Z",
+    "acceptance_status": "PASS",
+    "expected_pair_checks": 160,
+    "completed_pair_checks": 160,
+    "structural_failure_checks": 0,
+    "strategy_result_inspection": false
+  },
+  "universe": [
+    {
+      "city_id": "NYC",
+      "product_code": "UHLGA",
+      "station_code": "KLGA",
+      "station_timezone": "America/New_York"
+    },
+    {
+      "city_id": "CHI",
+      "product_code": "UHMDW",
+      "station_code": "KMDW",
+      "station_timezone": "America/Chicago"
+    },
+    {
+      "city_id": "DEN",
+      "product_code": "UHBKF",
+      "station_code": "KBKF",
+      "station_timezone": "America/Denver"
+    }
+  ],
+  "event_date_source": "strict_parse_of_contract_details_question",
+  "semantic_rule": "every listed contract must be strictly classified by question date before target-date filtering; full target-date ladder; same-threshold YES/NO mutual complement; rules/details payout=$1; tick=$0.01; all cross-threshold normalized semantics identical except threshold; adjacent original listed thresholds only; unclassifiable listed contract or verified semantic mismatch is a study blocker",
+  "session_timezone": "America/New_York",
+  "session_start": "09:00:00",
+  "session_end_exclusive": "17:00:00",
+  "cadence_seconds": 30,
+  "nominal_slots_per_date": 960,
+  "slot_start_lateness_tolerance_seconds": 5.0,
+  "pair_request_rule": "each adjacent lower-YES+higher-NO pair requested together in one two-conid HTTP response",
+  "quote_readiness": {
+    "max_request_elapsed_seconds": 5.0,
+    "max_clock_offset_seconds": 1.0,
+    "max_broker_future_seconds": 1.0,
+    "delivery": "real_time",
+    "ask_tick": "0.01",
+    "minimum_ask_size": 1,
+    "broker_updated_age_and_pair_skew_role": "diagnostic_only",
+    "minimum_valid_broker_epoch_ms": 946684800000,
+    "buyable_ask_min_usd": "0.01",
+    "buyable_ask_max_usd": "0.99",
+    "structural_integrity_precedes_quote_availability": true
+  },
+  "revalidation": {
+    "required_consecutive_nominal_slots": 2,
+    "minimum_elapsed_seconds": 25.0,
+    "maximum_elapsed_seconds": 35.0,
+    "invalid_or_unavailable_intervening_observation_resets": true
+  },
+  "cost": {
+    "lower_yes_price": "higher displayed ask across the two qualifying observations",
+    "higher_no_price": "higher displayed ask across the two qualifying observations",
+    "broker_fee_per_contract_usd": "0.00",
+    "exchange_fee_per_contract_usd": "0.01",
+    "tick_reserve_per_leg_usd": "0.01",
+    "annual_funding_rate": "0.05",
+    "funding_rate_policy": "fixed 5% annual conservative pre-result stress rate through payout",
+    "round_total_cost_up_to_cent": true,
+    "qualification_ceiling_usd": "0.99",
+    "ordinary_settlement_payout_floor_usd": "1.00",
+    "fee_source_url": "https://www.interactivebrokers.com/en/pricing/commissions-events.php",
+    "fee_schedule_checked_date": "2026-10-06",
+    "fee_schedule_scope": "IBKR direct clients",
+    "direct_client_schedule_attested_at_freeze": true
+  },
+  "selection": {
+    "maximum_qualifying_baskets_per_city_date": 1,
+    "rule": "first qualifying revalidated basket by nominal confirmation slot; ties by lower threshold then lower-YES conid",
+    "no_later_more_favorable_replacement": true
+  },
+  "date_health": {
+    "minimum_normal_slots": 951,
+    "maximum_total_invalid_slots": 9,
+    "maximum_consecutive_invalid_slots": 2,
+    "quote_unavailable_does_not_make_slot_structurally_invalid": true,
+    "aborted_or_missing_dates_remain_in_primary_denominator": true,
+    "maximum_aborted_or_missing_dates_before_operational_kill": 3,
+    "no_replacement_dates": true,
+    "integrity_failure_dates_retain_in_primary_denominator": true
+  },
+  "evaluation": {
+    "planned_dates": [
+      "2026-10-07",
+      "2026-10-08",
+      "2026-10-09",
+      "2026-10-10",
+      "2026-10-11",
+      "2026-10-12",
+      "2026-10-13",
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21",
+      "2026-10-22",
+      "2026-10-23",
+      "2026-10-24",
+      "2026-10-25",
+      "2026-10-26",
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02",
+      "2026-11-03",
+      "2026-11-04",
+      "2026-11-05"
+    ],
+    "primary_unit": "planned calendar date",
+    "primary_endpoint": "proportion of all 30 planned dates with at least one qualifying revalidated structural basket in any frozen city",
+    "aborted_or_missing_date_primary_value": 0,
+    "recurrence_gate_minimum_qualifying_dates": 5,
+    "inference": {
+      "primary": "date-level proportion",
+      "moving_block_bootstrap_block_days": 3,
+      "moving_block_bootstrap_replicates": 10000,
+      "sensitivity_block_days": 7,
+      "bootstrap_seed": 20261006,
+      "degenerate_all_zero_or_all_one_ci": null
+    }
+  },
+  "result_firewall": {
+    "daily_collector_computes_cost_or_opportunity": false,
+    "daily_stdout_exposes_prices_or_candidate_counts": false,
+    "sealed_input_file": "sealed_pair_observations.jsonl",
+    "endpoint_evaluator_refuses_before_final_session_end": true,
+    "do_not_inspect_sealed_inputs_before_endpoint": true,
+    "endpoint_requires_sealed_sha_and_complete_slot_pair_ledgers": true,
+    "structural_invalid_slots_cannot_contribute_to_revalidation": true,
+    "eligible_pair_requests_and_responses_must_finish_before_session_end": true
+  },
+  "kill_criteria": [
+    "cross-threshold settlement semantics cannot be verified",
+    "feed or schema produces structural failures that make more than 3 planned dates aborted or missing",
+    "fewer than 5 distinct qualifying dates occur in the 30-date primary endpoint",
+    "apparent edge disappears under the frozen cost treatment",
+    "later micro-live execution cannot control rejects cancellations or single-leg exposure or does not support positive net expected value"
+  ],
+  "no_rescue": "no post-result city threshold cadence session-window cost-buffer date replacement or eligibility retuning",
+  "confirmatory_evaluation_started": false,
+  "terms_source": "https://data.forecastex.com/regulatory/DailyTemperatureTermsandConditions.pdf",
+  "confirmatory_evaluation_started_at_freeze": false,
+  "terms": {
+    "source_url": "https://data.forecastex.com/regulatory/DailyTemperatureTermsandConditions.pdf",
+    "frozen_pdf_path": "docs/v3/legal/DailyTemperatureTermsandConditions_2026-10-06.pdf",
+    "sha256": "226826cb5d64cddc52c86b99a2e908f25ba48aa431f6c9ffe2c30e55731db511",
+    "source_agency_expected": "Weather Underground",
+    "minimum_tick_usd": "0.01",
+    "ordinary_yes_no_payout_usd": "1.00",
+    "last_trading_time_rule": "23:59 local time on the date listed in the Contract",
+    "runtime_hash_mismatch_role": "STUDY_BLOCKER"
+  }
+}

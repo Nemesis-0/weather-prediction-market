@@ -1,0 +1,92 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.coverage
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS / editors
+.DS_Store
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Secrets / credentials
+.env
+.env.*
+*.pem
+*.key
+
+# Logs
+logs/
+*.log
+
+# Local backups / review bundles
+local_artifacts/
+*.zip
+repo_audit_for_review.txt
+
+# Historical / superseded working archive
+archive/
+
+# Raw and processed working datasets
+data/**
+!data/README.md
+
+# Legacy / regenerable V1 working-result directories
+results/development/
+results/historical_holdout/
+results/historical_economics/
+results/corrected_historical/
+results/corrected_historical_economics/
+
+# Original H2.1 machine-specific frozen manifest.
+# Preserved locally unchanged because editing it would alter provenance.
+results/v2_market_reaction/v2_market_reaction_manifest.txt
+
+# V3 local runtime / authentication state
+runtime/
+secrets/
+configs/v3/local/
+*.session
+*.cookiejar
+
+# ============================================================
+# Local/private research workspace — intentionally not public
+# ============================================================
+
+# Generated/local artifacts
+local_artifacts/
+logs/
+runtime/
+.pytest_cache/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Ongoing alpha-discovery research
+configs/v3/alpha_*
+scripts/v3/*alpha*
+tests/v3/test_alpha_*
+src/v3/discovery/
+
+# Internal alpha checkpoints
+docs/v3/alpha_funnel_phase2_checkpoint_*.md
+
+# Credentials / sessions
+.env
+.env.*
+secrets/
+credentials/
+
+# Internal alpha-funnel implementation
+docs/v3/alpha_funnel_v1.md
+src/v3/alpha_funnel/

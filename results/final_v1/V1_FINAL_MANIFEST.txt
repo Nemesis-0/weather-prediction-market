@@ -1,0 +1,24 @@
+V1 CANONICAL FINAL MANIFEST
+================================================================================
+Created UTC: 2026-09-30T17:49:29.893081+00:00
+
+Independent Checkpoint 1b: A — V1 can now be closed.
+
+4a12b55abfed212451a7fe5c06737840eb9f6677cffacf25e102002f64444b3e  results/final_v1/README.md
+adbae8d7cbd2d7d77b19f720ed2fc17a722cc0268c7090d577b4a58f2e2837f8  results/final_v1/V1_FINAL_CLOSURE.md
+3eab01a25dd045f33ec0aeb86fda4cd4884ac3303df54e516b40951cf330417f  results/final_v1/corrected_historical_summary.txt
+a823ccfd581511261b69b6767dd22f219c85b64854d65059b5e6079b65ed4b00  results/final_v1/corrected_economic_summary.csv
+628e9bb127839fa5cdafffb5e11959d342c05a50643d371f4850eda25fe4f375  results/final_v1/corrected_trade_decisions.csv
+3bb9b0ddf3a3e972da23537ec758e1d8b21b55f277a13f0b80bf3e15edcbb487  results/final_v1/corrected_execution_stress_summary.csv
+c01dadeef3460699281169d0bcf4ae725c3bbc6a83a8a8273e97101b54f9f40e  results/final_v1/corrected_execution_stress_m2_vs_m0.csv
+952c1ed7ea653de8de8f94984da53f4423fa22ad25167dbb0b51f35d69d8c279  docs/v1_source_timing_correction_protocol.md
+f65ad52ecd350c3ea4f5ed49257fe91a4cc5dfcac21b145f3c460d870f74290a  docs/v1_final_corrected_closure.md
+4c1050bdf33dc071186313b5fcb0dcef61a48e4aad5aaf8633a6135570ef473f  results/audit/v1_noaa_publication_timing_census.txt
+c13de15309ef08597892873008dac01f19990aae76b2429fe8f5935e5c01a3aa  results/audit/v1_weather_timing_correction_manifest.txt
+d57396c7e0d7a6500a1b218f5f3beb30c88e71657c420d6e601dbbc87a2ebe94  data/processed/weather_panel_primary.csv
+f2abe0ac6c9d062a2f7b115b2da821d8cf74d339ea1d12bfb16da3f00dcd1d64  data/processed/model_features_event.csv
+673dd70e2f1689784dff9e71e77dc09849a1257ed4f37f9ce09ceb1c2291676a  src/modeling/conditional_softmax.py
+4748e8699c2a8761121cd9e888f4a1c9574709820a2cbe414545331c0ac2ad58  src/modeling/run_development.py
+72d19e1abc27aa83084f1f8764e74820d9c9672b7a3214993b5e560b272abc2d  src/modeling/evaluate_corrected_historical.py
+44c21e335a387b912cfbe8dc9a5ef13e235faa48c770d3f3ce41260f2c143a97  src/modeling/evaluate_corrected_historical_economics.py
+df04fdcc28c6fecb7b4c62767ee1768870c362913bf99c6d4623a53c540a2681  src/modeling/evaluate_corrected_execution_stress.py

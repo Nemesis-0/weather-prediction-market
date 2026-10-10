@@ -1,0 +1,60 @@
+V2 FULL WEATHER REVISION FEASIBILITY CENSUS
+============================================================================================
+
+Calendar dates examined:              46
+City-days examined:                  138
+Expected forecast states:            552
+Observed state records:              552
+Usable forecast states:              552
+Missing/unusable forecast states:    0
+
+City-days with all 4 states:         138
+City-days with >=3 states:           138
+City-days with <2 states:            0
+
+Sequential revision pairs:           414
+Pairs with TXN change:               169
+Pairs with XND change:               110
+Pairs with any TXN/XND change:       220
+
+City-days where actual publication order differs from nominal order:          0
+Pair-level nominal-order reversals:   0
+
+Publication lag among usable states:
+  min:    42.7 min
+  median: 76.3 min
+  p95:    102.8 min
+  max:    857.2 min
+
+Sequential inter-publication gaps:
+  min:    38.2 min
+  median: 390.5 min
+  p05:    325.2 min
+  p95:    416.6 min
+  max:    1161.5 min
+
+Absolute TXN revision size:
+  zero-rate: 0.592
+  median:    0.00 F
+  p90:       1.00 F
+  max:       3.00 F
+
+Absolute XND revision size:
+  zero-rate: 0.734
+  median:    0.00
+  p90:       1.00
+  max:       2.00
+
+Transition summary:
+
+  transition  revision_pairs  txn_change_rate  xnd_change_rate  any_change_rate  median_abs_delta_txn  median_gap_minutes
+    00Z->06Z             138         0.442029         0.268116         0.543478                   0.0          328.991667
+    06Z->12Z             138         0.485507         0.318841         0.623188                   0.0          408.766667
+prev18Z->00Z             138         0.297101         0.210145         0.427536                   0.0          391.300000
+
+Missingness reasons:
+  None.
+
+Interpretation restriction:
+This census evaluates weather-state reconstruction and publication timing only.
+No settlement performance, market-response performance, or PnL was evaluated.

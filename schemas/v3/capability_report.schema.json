@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V3 IBKR / ForecastEx Capability Report",
+  "type": "object",
+  "required": [
+    "audit_version",
+    "created_at_utc",
+    "base_url",
+    "read_only",
+    "orders_submitted",
+    "gateway_reachable",
+    "errors",
+    "remaining_audit_work"
+  ],
+  "properties": {
+    "audit_version": {"const": "v3_ibkr_capability_2"},
+    "created_at_utc": {"type": "string"},
+    "base_url": {"type": "string"},
+    "verify_tls": {"type": "boolean"},
+    "read_only": {"const": true},
+    "orders_submitted": {"const": false},
+    "gateway_reachable": {"type": "boolean"},
+    "auth": {"type": ["object", "null"]},
+    "tickle_ok": {"type": "boolean"},
+    "accounts_endpoint_ok": {"type": "boolean"},
+    "account_count": {"type": ["integer", "null"], "minimum": 0},
+    "auto_weather_discovery": {},
+    "contract_details": {},
+    "contract_rules": {},
+    "market_snapshot": {},
+    "historical_probe": {},
+    "websocket_probe": {},
+    "errors": {"type": "array", "items": {"type": "string"}},
+    "remaining_audit_work": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

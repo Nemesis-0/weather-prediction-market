@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "ask": {},
+    "ask_size": {},
+    "batch_id": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "bid": {},
+    "bid_size": {},
+    "broker_updated_ms": {},
+    "collector_version": {
+      "type": "string"
+    },
+    "conid": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "cycle_id": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "field_presence": {
+      "type": "object"
+    },
+    "market_data_availability": {},
+    "record_type": {
+      "const": "quote"
+    },
+    "request_elapsed_ms": {
+      "minimum": 0,
+      "type": "number"
+    },
+    "request_sent_utc": {
+      "type": "string"
+    },
+    "response_received_utc": {
+      "type": "string"
+    },
+    "session_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "record_type",
+    "collector_version",
+    "session_id",
+    "cycle_id",
+    "batch_id",
+    "request_sent_utc",
+    "response_received_utc",
+    "conid",
+    "field_presence"
+  ],
+  "title": "V3 Study 1 shakedown quote record",
+  "type": "object"
+}

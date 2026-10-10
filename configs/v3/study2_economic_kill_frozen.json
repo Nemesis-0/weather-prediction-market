@@ -1,0 +1,48 @@
+{
+  "decision_statuses": {
+    "nonpositive": "NO_POSITIVE_MARGIN_IN_THIS_FRESH_SESSION",
+    "positive": "APPARENT_POSITIVE_CONSERVATIVE_MARGIN_GATE3_REQUIRED",
+    "unsupported": "MODEL_DATA_INSUFFICIENT"
+  },
+  "economic_margin": {
+    "NO": "(1 - q_U) - executable_ask_no - total_cost",
+    "YES": "q_L - executable_ask_yes - total_cost"
+  },
+  "eligibility_correction_id": "v3_study2_quote_eligibility_fix_2026-10-07_r1",
+  "guardrails": {
+    "candidate_sizing_forbidden": true,
+    "m0_retuning_forbidden": true,
+    "market_midpoint_forbidden": true,
+    "order_submission_forbidden": true,
+    "positive_coupon_credit_forbidden": true,
+    "support_rule_retuning_forbidden": true
+  },
+  "protocol_id": "v3_study2_economic_kill_frozen_2026-10-07_r1",
+  "quote_requirements": {
+    "ask_present": true,
+    "ask_size_positive": true,
+    "broker_field_presence_ask": true,
+    "broker_field_presence_ask_size": true,
+    "delivery": "real_time",
+    "fresh_session_after_correction_commit": true,
+    "top_of_book_decoder_flag_required": false,
+    "top_of_book_decoder_note": "Correction after a schema-only post-freeze blocker probe: in accepted ForecastEx artifacts, real-time executable buy asks are represented by ask/ask_size field presence even when availability_decoded.top_of_book is false because the same contract row is one-sided. The decoder flag is retained as diagnostic metadata but is not a buy-ask eligibility gate."
+  },
+  "reserves": {
+    "execution_reserve_usd_per_contract": 0.01,
+    "funding_carry_reserve_usd_per_contract": 0.0,
+    "funding_carry_zero_note": "Short-horizon fast-screen convention only; zero is not claimed to be conservative. Positive incentive/coupon economics are excluded."
+  },
+  "total_cost_usd_per_contract": 0.02,
+  "verified_pricing": {
+    "exchange_fee_usd_per_contract": 0.01,
+    "ibkr_commission_usd_per_contract": 0.0,
+    "official_fee_source": "https://www.interactivebrokers.com/en/pricing/commissions-events.php",
+    "official_rules_api_reference": "https://www.interactivebrokers.com/docs/web-api/api-reference/trading/trading-event-contracts/get-forecast-rules",
+    "payout_usd": 1.0,
+    "price_increment_usd": 0.01,
+    "provider": "Interactive Brokers",
+    "venue": "ForecastEx",
+    "verification_date": "2026-10-07"
+  }
+}

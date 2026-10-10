@@ -1,0 +1,25 @@
+V1 source-publication timing correction
+================================================================================
+Applied UTC: 2026-09-30T17:16:58.513606+00:00
+
+Correction count: 4
+
+No feature, model, lambda grid, scoring rule, market snapshot,
+trading rule, or economic rule was changed.
+
+The only correction was replacement of weather information that
+was not yet source-verified as publicly available at the frozen
+10AM local decision time.
+
+Corrected rows:
+   city event_date_local station         decision_time_utc        old_cycle_time_utc  old_txn  old_xnd  corrected_cycle_time_utc corrected_source_available_at_utc  corrected_margin_minutes  corrected_txn  corrected_xnd                                            raw_fallback_file
+    NYC       2026-08-31    KNYC 2026-08-31T14:00:00+00:00 2026-08-31T12:00:00+00:00     78.0      4.0 2026-08-31T06:00:00+00:00         2026-08-31T06:49:06+00:00                430.900000           79.0            3.0 data/raw/weather/nbm_nbs/KNYC/2026-08-31_20260831T0600Z.json
+    NYC       2026-09-24    KNYC 2026-09-24T14:00:00+00:00 2026-09-24T12:00:00+00:00     69.0      2.0 2026-09-23T18:00:00+00:00         2026-09-23T18:55:41+00:00               1144.316667           68.0            3.0 data/raw/weather/nbm_nbs/KNYC/2026-09-24_20260923T1800Z.json
+Chicago       2026-09-24    KMDW 2026-09-24T15:00:00+00:00 2026-09-24T12:00:00+00:00     72.0      1.0 2026-09-24T00:00:00+00:00         2026-09-24T14:17:12+00:00                 42.800000           69.0            2.0 data/raw/weather/nbm_nbs/KMDW/2026-09-24_20260924T0000Z.json
+ Denver       2026-09-24    KDEN 2026-09-24T16:00:00+00:00 2026-09-24T12:00:00+00:00     75.0      3.0 2026-09-24T06:00:00+00:00         2026-09-24T15:31:56+00:00                 28.066667           72.0            4.0 data/raw/weather/nbm_nbs/KDEN/2026-09-24_20260924T0600Z.json
+
+Post-correction source-timing violations: 0
+
+Corrected canonical weather panel SHA256: d57396c7e0d7a6500a1b218f5f3beb30c88e71657c420d6e601dbbc87a2ebe94
+
+Original contaminated state preserved at: archive/v1_pre_source_timing_correction

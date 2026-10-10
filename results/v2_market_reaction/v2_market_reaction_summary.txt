@@ -1,0 +1,38 @@
+V2 H2.1 MARKET-REACTION EVENT STUDY
+========================================================================================
+
+Interpretation: positive beta means market probabilities moved, on average, in the direction of the newly published weather-proxy revision.
+
+PRIMARY +1H POPULATION
+  events:                 196
+  calendar dates:         45
+  beta:                   +0.029570
+  positive-dot fraction:  0.520
+  zero-dot events:        0
+
+Primary 3-day moving-block bootstrap:
+  95% CI: [-0.012251, +0.084617]
+
+Sensitivity:
+  1-day CI: [-0.019013, +0.088790]
+  7-day CI: [-0.000426, +0.074220]
+
+SECONDARY +2H
+  events:                 184
+  beta:                   +0.000731
+
+BY CITY — DESCRIPTIVE ONLY
+   city  events     beta  positive_dot_fraction
+Chicago      68 0.042781               0.485294
+ Denver      69 0.028839               0.565217
+    NYC      59 0.013821               0.508475
+
+BY TRANSITION — DESCRIPTIVE ONLY
+  transition  events     beta  positive_dot_fraction
+prev18Z->00Z      53 0.024609               0.509434
+    00Z->06Z      60 0.015446               0.600000
+    06Z->12Z      83 0.038324               0.469880
+
+RESTRICTION:
+No settlement outcomes, prediction accuracy, executable trade prices, fees, or PnL were used.
+This result cannot establish incomplete assimilation, tradeability, or alpha.

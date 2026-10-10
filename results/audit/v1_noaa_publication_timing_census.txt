@@ -1,0 +1,33 @@
+V1 NOAA ACTUAL PUBLICATION-TIMING CENSUS
+====================================================================================
+Event dates examined:                 46
+City-days examined:                   138
+NOAA object HTTP failures:            0
+Missing Last-Modified timestamps:     0
+Non-12Z selected V1 cycles:           0
+Actual availability violations:       4
+Dates with availability violations:   2
+
+12Z NOAA publication lag from nominal cycle:
+  minimum: 77.8 min
+  median:  97.5 min
+  maximum: 250.2 min
+
+Actual publication margin before 10AM decision by city:
+          n  violations  margin_min  margin_median  margin_max
+city                                                          
+Chicago  46           1      -70.18          82.47      102.23
+Denver   46           1      -10.18         142.47      162.23
+NYC      46           2     -130.18          22.47       42.23
+
+Important:
+The original +60 minute availability rule was an assumed conservative eligibility rule, not the observed NOAA publication timestamp. This census replaces that assumption for the mechanical V1 provenance check.
+
+FINAL NOAA TIMING STATUS: FAIL — INVESTIGATE
+
+VIOLATING CITY-DAYS:
+   city event_date_local         decision_time_utc    noaa_last_modified_utc  actual_margin_minutes
+    NYC       2026-08-31 2026-08-31T14:00:00+00:00 2026-08-31T14:08:38+00:00              -8.633333
+Chicago       2026-09-24 2026-09-24T15:00:00+00:00 2026-09-24T16:10:11+00:00             -70.183333
+ Denver       2026-09-24 2026-09-24T16:00:00+00:00 2026-09-24T16:10:11+00:00             -10.183333
+    NYC       2026-09-24 2026-09-24T14:00:00+00:00 2026-09-24T16:10:11+00:00            -130.183333

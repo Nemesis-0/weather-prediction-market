@@ -1,0 +1,38 @@
+{
+  "allowed_shakedown_inspection": [
+    "feed_completeness",
+    "timing_and_batch_skew",
+    "6509_delivery_status",
+    "session_health",
+    "gaps_and_errors",
+    "contract_semantics",
+    "unattended_stability"
+  ],
+  "confirmatory_evaluation_started": false,
+  "forbidden_shakedown_tuning_inputs": [
+    "basket_cost",
+    "opportunity_frequency",
+    "hypothetical_pnl",
+    "realized_pnl",
+    "favorable_city",
+    "favorable_threshold",
+    "favorable_time_window"
+  ],
+  "long_run_shakedown_complete": true,
+  "open_operational_parameters": [
+    "session_window",
+    "cross_threshold_semantics_rule",
+    "event_date_mapping",
+    "cost_model",
+    "gap_abort_denominator_policy"
+  ],
+  "operational_freeze_candidate": "docs/v3/study1_operational_freeze_candidate.md",
+  "scientific_architecture_frozen": true,
+  "scientific_family": "structural_cross_threshold_consistency",
+  "shakedown_amendment": "docs/v3/study1_shakedown_amendment_2026-10-05.md",
+  "shakedown_completed_distinct_sessions": 2,
+  "shakedown_target_distinct_sessions_original": 3,
+  "status": "PRE_REGISTRATION_FREEZE_CANDIDATE",
+  "strategy_pnl_inspection_allowed": false,
+  "study_id": "V3-S1-STRUCTURAL-CONSISTENCY"
+}

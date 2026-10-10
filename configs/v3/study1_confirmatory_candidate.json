@@ -1,0 +1,66 @@
+{
+  "status": "SUPERSEDED_BY_FINAL_FREEZE_R1",
+  "universe": [
+    {
+      "city_id": "NYC",
+      "product_code": "UHLGA",
+      "station_code": "KLGA",
+      "station_timezone": "America/New_York"
+    },
+    {
+      "city_id": "CHI",
+      "product_code": "UHMDW",
+      "station_code": "KMDW",
+      "station_timezone": "America/Chicago"
+    },
+    {
+      "city_id": "DEN",
+      "product_code": "UHBKF",
+      "station_code": "KBKF",
+      "station_timezone": "America/Denver"
+    }
+  ],
+  "event_date_source": "strict_parse_of_contract_details_question",
+  "session_timezone": "America/New_York",
+  "session_start": "09:00:00",
+  "session_end_exclusive": "17:00:00",
+  "cadence_seconds": 30,
+  "nominal_slots_per_date": 960,
+  "pair_request_rule": "each adjacent lower-YES+higher-NO pair must be validated from the same HTTP response",
+  "quote_readiness": {
+    "max_request_elapsed_seconds": 5.0,
+    "max_clock_offset_seconds": 1.0,
+    "max_broker_future_seconds": 1.0,
+    "delivery": "real_time",
+    "ask_tick": "0.01",
+    "minimum_ask_size": 1
+  },
+  "cost_candidate": {
+    "broker_fee_per_contract_usd": "0.00",
+    "exchange_fee_per_contract_usd": "0.01",
+    "tick_reserve_per_leg_usd": "0.01",
+    "qualification_ceiling_usd": "0.99",
+    "funding_rate_source": "NYFRB_SOFR_frozen_at_final_freeze",
+    "round_total_cost_up_to_cent": true,
+    "fee_source_url": "https://www.interactivebrokers.com/en/pricing/commissions-events.php",
+    "fee_public_schedule_checked_date": "2026-10-05",
+    "account_direct_client_confirmation_required": true
+  },
+  "date_health": {
+    "minimum_normal_slots": 951,
+    "maximum_total_invalid_slots": 9,
+    "maximum_consecutive_invalid_slots": 2,
+    "aborted_dates_remain_in_primary_denominator": true
+  },
+  "evaluation_dates": 30,
+  "confirmatory_evaluation_started": false,
+  "terms_source": "https://data.forecastex.com/regulatory/DailyTemperatureTermsandConditions.pdf",
+  "broker_timestamp_diagnostics": {
+    "age_reference_seconds": 60.0,
+    "pair_skew_reference_seconds": 5.0,
+    "max_broker_future_seconds": 1.0,
+    "eligibility_role": "old age and cross-leg _updated skew are diagnostic only; implausibly future _updated remains a hard failure"
+  },
+  "superseded_by": "configs/v3/study1_confirmatory_frozen.json",
+  "final_protocol_id": "v3_study1_structural_consistency_frozen_2026-10-06_r1"
+}

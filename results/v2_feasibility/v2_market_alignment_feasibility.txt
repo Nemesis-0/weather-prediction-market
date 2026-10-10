@@ -1,0 +1,48 @@
+V2 MARKET-ALIGNMENT FEASIBILITY AUDIT
+============================================================================================
+
+All revision events:                         414
+Weather-changing revision events:            220
+
+All events with clean PRE + POST1H:          376
+Changed events with clean PRE + POST1H:      196
+Distinct dates represented at clean +1H:     45
+
+Changed events with clean PRE + POST2H:      184
+
+Clean changed +1H events by city:
+city
+NYC        59
+Chicago    68
+Denver     69
+
+Clean changed +1H events by transition:
+transition
+prev18Z->00Z    53
+00Z->06Z        60
+06Z->12Z        83
+
+Changed-event +1H failure diagnostics:
+  no_clean_pre: 12
+  pre_not_after_old_publication: 0
+  pre_stale_or_missing: 12
+  post1_missing_or_outside_tolerance: 8
+  post1_overlaps_next_weather_update: 4
+
+Transition coverage:
+  transition  all_events  changed_events  clean_all_1h  clean_changed_1h
+    00Z->06Z         138              75           116                60
+    06Z->12Z         138              86           135                83
+prev18Z->00Z         138              59           125                53
+
+Gate D frozen thresholds:
+  >= 90 clean changed events: 196 -> PASS
+  >= 30 distinct dates: 45 -> PASS
+  >= 20 per city: PASS
+  >= 15 per transition: PASS
+
+FINAL GATE D STATUS: PASS
+
+Interpretation restriction:
+This audit evaluates market-state availability and event isolation only.
+No market-reaction direction, settlement outcome, forecast performance, or PnL was evaluated.

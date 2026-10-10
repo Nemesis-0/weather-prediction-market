@@ -1,0 +1,49 @@
+{
+  "core_files": [
+    {
+      "bytes": 7065,
+      "path": "configs/v3/study1_confirmatory_frozen.json",
+      "sha256": "cfb46ea069c196753103ce7f04bfca0acd8c2c6161978be7547ff3f5cbd6c18f"
+    },
+    {
+      "bytes": 8152,
+      "path": "docs/v3/study1_final_frozen_protocol.md",
+      "sha256": "4b69316f689f3620461e26d4dfef0bc0a41169f3962da15e40cd7d4136b859bf"
+    },
+    {
+      "bytes": 189351,
+      "path": "docs/v3/legal/DailyTemperatureTermsandConditions_2026-10-06.pdf",
+      "sha256": "226826cb5d64cddc52c86b99a2e908f25ba48aa431f6c9ffe2c30e55731db511"
+    },
+    {
+      "bytes": 15395,
+      "path": "scripts/v3/run_study1_confirmatory_day.py",
+      "sha256": "2e8e46b16d6143fab9036312e9f817c2d31da65b8541eae05a91e70bd73fb08b"
+    },
+    {
+      "bytes": 6502,
+      "path": "scripts/v3/evaluate_study1_after_endpoint.py",
+      "sha256": "8f509b3b2c139aace5130eba73b6e4155dff7285df01a4645597ccbf2f054053"
+    },
+    {
+      "bytes": 31421,
+      "path": "src/v3/study1/confirmatory.py",
+      "sha256": "3b236178326b1bbf2053de6d2c7233bc75ebe5f6f0c638793c0fa5fa217dd477"
+    },
+    {
+      "bytes": 23632,
+      "path": "src/v3/study1/frozen.py",
+      "sha256": "0771a63b4d6851ad778b9baec55ceea83d71c7680d4e91eea998dd2f8b4e6907"
+    }
+  ],
+  "freeze_parent_commit": "b698f85c63858ae372d918118c4f1cb822fd4cb7",
+  "protocol_id": "v3_study1_structural_consistency_frozen_2026-10-06_r1",
+  "final_verification_parent_commit": "58bf64c5ebe3eeb9de7ff9f06841d5bb1a95f39d",
+  "final_verification_fix": "Fail closed on missing/unknown quote_status and incomplete quote-status-specific fields before endpoint opportunity evaluation.",
+  "final_reverification_parent_commit": "94d7a1d4062d3406a1ce3af973ee993b4158c685",
+  "final_reverification_fix": "Fail closed on frozen pair identity/city mismatches and quote-status/failure-field conflicts before endpoint opportunity evaluation.",
+  "holistic_gate_parent_commit": "8d364a566f9d7c11e9e1aae2a2b459fdd3cda414",
+  "holistic_gate_fix": "Endpoint independently re-derives frozen date-health eligibility from the slot ledger and converts missing/corrupt/invalid day-health summaries into explicit integrity failures before opportunity evaluation, while preserving semantic-blocker priority.",
+  "health_reader_final_parent_commit": "02b1f2e742e920c6ff161832f945f55f9ad3b533",
+  "health_reader_final_fix": "Type-check date_status before enum membership and preserve readable semantic blockers for the exact frozen protocol/date before ordinary status-schema errors."
+}

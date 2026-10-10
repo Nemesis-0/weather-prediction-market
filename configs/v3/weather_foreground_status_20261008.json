@@ -1,0 +1,21 @@
+{
+  "as_of_date": "2026-10-08",
+  "domain": "weather_prediction_markets",
+  "foreground_research_authorized": false,
+  "positive_executable_alpha_claim": false,
+  "status": "FOREGROUND_RETIRED_PASSIVE_WATCH_ONLY",
+  "canonical_closure": "docs/v3/weather_alpha_domain_closure_20261008.md",
+  "studies": {
+    "v1_static_weather_information": "CLOSED_NO_RELIABLE_INCREMENTAL_VALUE",
+    "v2_forecast_revision_assimilation": "CLOSED_NO_RELIABLE_ASSIMILATION_EFFECT",
+    "v3_study1_cross_threshold_confirmatory": "DEFERRED_PRE_D0_NOT_RUN",
+    "v3_study2_settlement_aware_m0": "CLOSED_ECONOMIC_KILL",
+    "v3_alpha_funnel_static_structural": "NO_PROMOTE_SURVIVOR"
+  },
+  "residual_watchers": [
+    "exact_crossing_transient_lag",
+    "true_lifecycle_reopen",
+    "payout_equivalent_cross_venue_weather_structure"
+  ],
+  "reopen_policy": "Only as a new prospectively specified version after material new trigger evidence; do not reopen V1, V2, or closed Study 2 specifications for rescue search."
+}

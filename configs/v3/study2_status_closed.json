@@ -1,0 +1,24 @@
+{
+  "apparent_positive_rows": 78,
+  "canonical_preclosure_head": "88d4f9d12917e9ae358e9761921d613ec4e48cb8",
+  "closure_local_date": "2026-10-07",
+  "diagnostic_blocked_known_crossed_threshold_rows": 76,
+  "diagnostic_max_remaining_margin_per_contract": 0.001623866150736085,
+  "diagnostic_remaining_positive_rows": 2,
+  "future_work_policy": {
+    "build_settlement_guard_v2_under_closed_route": false,
+    "continue_fresh_study2_screening": false,
+    "reopen_only_as_new_version_with_new_precommitted_protocol": true,
+    "repair_calibration_to_rescue_result": false,
+    "retune_m0": false,
+    "widen_support": false
+  },
+  "gate3_screen": "local_artifacts/v3_study2_economic_screen/20261008T011625Z_r1",
+  "gate3_trigger_session": "local_artifacts/v3_study2_economic_sessions/20261008T011625Z_ready_window",
+  "gate3_verdict": "NO-GO",
+  "orders_authorized": false,
+  "primary_blocker": "omitted_point_in_time_settlement_source_state",
+  "route": "current observation-only M0 economic route",
+  "status": "CLOSED_ECONOMIC_KILL",
+  "study": "V3 Study 2 \u2014 KMDW Settlement-Aware Intraday Nowcasting"
+}

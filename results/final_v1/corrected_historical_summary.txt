@@ -1,0 +1,38 @@
+CORRECTED HISTORICAL EVALUATION RESULTS
+============================================================================
+Development city-days:          93
+Corrected historical dates:      15
+Corrected historical city-days:  45
+
+Frozen fitted models:
+  M0: lambda=0.01 | logloss=1.0115 | brier=0.4996 | top1=0.6222
+  M1: lambda=1 | logloss=1.5413 | brier=0.7537 | top1=0.3333
+  M2: lambda=0.001 | logloss=1.0259 | brier=0.4910 | top1=0.6889
+
+Raw normalized market reference:
+  logloss=0.9752 | brier=0.5076 | top1=0.6222
+
+PRIMARY: paired M2 - fitted M0
+(negative favors weather-augmented M2)
+  Mean date log-loss delta: +0.0144
+  Median date log-loss delta: -0.0090
+  Mean date Brier delta:   -0.0086
+  Dates M2 beats M0:       9 / 15
+
+Primary 3-day moving-block bootstrap:
+  Log-loss delta 95% CI: [-0.0376, +0.0863]
+  Brier delta 95% CI:    [-0.0337, +0.0157]
+
+Sensitivity:
+  1-day log-loss CI: [-0.0283, +0.0637]
+  7-day log-loss CI: [-0.0268, +0.0809]
+
+By-city paired M2 - M0:
+          n  mean_delta_log_loss  median_delta_log_loss  mean_delta_brier
+city                                                                     
+Chicago  15               0.0274                -0.0117           -0.0044
+Denver   15               0.0215                -0.0409           -0.0157
+NYC      15              -0.0058                -0.0112           -0.0057
+
+Historical evaluation recomputed after source-timing correction.
+Do not retune V1 based on these results.

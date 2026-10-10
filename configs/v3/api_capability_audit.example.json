@@ -1,0 +1,10 @@
+{
+  "base_url": "https://localhost:5000/v1/api",
+  "verify_tls": false,
+  "auto_weather": true,
+  "market_name_pattern": "temperature|weather",
+  "max_markets": 6,
+  "max_contract_pairs_per_market": 2,
+  "probe_history": true,
+  "websocket_seconds": 5.0
+}

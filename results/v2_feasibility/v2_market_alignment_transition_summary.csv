@@ -1,0 +1,4 @@
+transition,all_events,changed_events,clean_all_1h,clean_changed_1h
+00Z->06Z,138,75,116,60
+06Z->12Z,138,86,135,83
+prev18Z->00Z,138,59,125,53

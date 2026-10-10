@@ -1,0 +1,61 @@
+V2 H2.2 FINAL HISTORICAL DIRECTIONAL ANALYSIS
+================================================================================================
+
+Execution-freeze files verified: 8
+
+PRIMARY — normalized later-window association
+  events:                 179
+  calendar dates:         46
+  beta:                   -0.02813775
+  positive-dot fraction:  0.464
+  zero-dot events:        0
+
+  Primary 3-day moving-block bootstrap:
+    95% CI: [-0.07276015, +0.03359751]
+
+  Sensitivity:
+    1-day CI: [-0.07969537, +0.02178450]
+    7-day CI: [-0.07177623, +0.03309736]
+
+FALSIFICATION — exact PRE-60min placebo
+  events:                 174
+  beta:                   -0.01851410
+  positive-dot fraction:  0.563
+  3-day 95% CI:           [-0.06127073, +0.01472115]
+  1-day CI:               [-0.05872353, +0.01967436]
+  7-day CI:               [-0.05585465, +0.01123688]
+
+DIAGNOSTIC — unnormalized midpoint later-window projection
+  beta:                   -0.02898768
+  3-day 95% CI:           [-0.07426099, +0.03362353]
+  1-day CI:               [-0.08295631, +0.02146754]
+  7-day CI:               [-0.07616479, +0.03271995]
+
+DENOMINATOR CONCENTRATION
+  max single-date share:  0.0714
+  top-5 date share:       0.2585
+  denominator HHI:        0.0315
+  effective dates:        31.76
+
+NORMALIZATION / LIQUIDITY DESCRIPTIVES
+  mean delta midpoint sum: +0.001369
+  median delta midpoint sum: +0.000000
+  mean delta total spread: +0.002961
+  median delta total spread: +0.000000
+
+BY CITY — DESCRIPTIVE ONLY
+   city  events      beta  positive_dot_fraction
+Chicago      63 -0.052045               0.380952
+ Denver      60 -0.001165               0.516667
+    NYC      56 -0.020956               0.500000
+
+BY TRANSITION — DESCRIPTIVE ONLY
+  transition  events      beta  positive_dot_fraction
+    00Z->06Z      51 -0.014682               0.411765
+    06Z->12Z      78 -0.055253               0.435897
+prev18Z->00Z      50  0.029905               0.560000
+
+CLAIM RESTRICTION
+A positive primary result would establish only a later-window post-publication directional association under the frozen historical design.
+It would not by itself establish publication-caused repricing, delayed causal assimilation, market inefficiency, executable alpha, or profitability.
+The placebo and raw-midpoint analyses are mandatory falsification/diagnostic results and cannot replace the primary statistic.
