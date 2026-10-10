@@ -90,3 +90,7 @@ credentials/
 # Internal alpha-funnel implementation
 docs/v3/alpha_funnel_v1.md
 src/v3/alpha_funnel/
+# Local recovery material
+RECOVERY_MANIFEST_SHA256.txt
+RECOVERY_README.md
+recovery_evidence/
