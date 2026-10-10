@@ -11,7 +11,9 @@ The project must pass two separate tests:
 ### Predictive hypothesis
 
 \[
+$$
 H_1:\quad M_{\text{market+weather}} > M_{\text{market-only}}
+$$
 \]
 
 where improvement is measured with proper probabilistic scoring rules such as Brier score, log loss, and calibration diagnostics.
@@ -19,7 +21,9 @@ where improvement is measured with proper probabilistic scoring rules such as Br
 ### Economic hypothesis
 
 \[
+$$
 H_2:\quad E[\text{net PnL}] > 0
+$$
 \]
 
 where net PnL is evaluated using executable bid/ask prices, fees, execution assumptions, and any additional realistic trading frictions.
@@ -127,7 +131,9 @@ V1 should deliberately stay simple.
 ### Model 0 — Market-only
 
 \[
+$$
 M_0 = f(p_{\text{market}})
+$$
 \]
 
 This is the main benchmark.
@@ -135,7 +141,9 @@ This is the main benchmark.
 ### Model 1 — Weather-only
 
 \[
+$$
 M_1 = f(X_{\text{weather}})
+$$
 \]
 
 Possible inputs:
@@ -151,19 +159,25 @@ Possible inputs:
 ### Model 2 — Market + Weather
 
 \[
+$$
 M_2 = f(p_{\text{market}}, X_{\text{weather}})
+$$
 \]
 
 The main scientific question is:
 
 \[
+$$
 P(Y=1\mid p_{\text{market}}, X_{\text{weather}})
+$$
 \]
 
 versus:
 
 \[
+$$
 P(Y=1\mid p_{\text{market}})
+$$
 \]
 
 The purpose is to test whether weather information contains **incremental information beyond the market**.
@@ -236,7 +250,9 @@ Same city-day contracts, multiple buckets, and repeated timestamps must not be t
 Let:
 
 \[
+$$
 \hat p
+$$
 \]
 
 be the model’s estimated true probability.
@@ -244,21 +260,33 @@ be the model’s estimated true probability.
 For a YES contract:
 
 \[
+$$
 EV_{\text{YES}}
+$$
 =
+$$
 \hat p
+$$
 -
+$$
 \text{ask}
+$$
 -
+$$
 \text{fee}
+$$
 -
+$$
 \text{other execution cost}
+$$
 \]
 
 A simple frozen rule can be:
 
 \[
+$$
 \hat p - \text{ask} - \text{fee} > \delta
+$$
 \]
 
 then buy YES.
@@ -266,7 +294,9 @@ then buy YES.
 Otherwise:
 
 \[
+$$
 \text{NO TRADE}
+$$
 \]
 
 The same logic applies to NO contracts.
@@ -301,19 +331,25 @@ Report at least:
 The project must distinguish:
 
 \[
+$$
 \text{forecasting alpha}
+$$
 \]
 
 from:
 
 \[
+$$
 \text{tradeable alpha}
+$$
 \]
 
 and from:
 
 \[
+$$
 \text{scalable alpha}
+$$
 \]
 
 ---
@@ -341,7 +377,9 @@ A negative result is still a valid research result.
 ### Outcome A — No market-relative predictive edge
 
 \[
+$$
 M_{\text{market+weather}} \not> M_{\text{market-only}}
+$$
 \]
 
 Interpretation:
@@ -352,13 +390,17 @@ Interpretation:
 ### Outcome B — Predictive edge, no economic edge
 
 \[
+$$
 M_{\text{market+weather}} > M_{\text{market-only}}
+$$
 \]
 
 but:
 
 \[
+$$
 E[\text{net PnL}] \le 0
+$$
 \]
 
 Interpretation:
@@ -403,7 +445,9 @@ Focus:
 Add:
 
 \[
+$$
 P(T_{\max} \mid \text{forecast + live observed trajectory})
+$$
 \]
 
 Possible information:
@@ -421,9 +465,13 @@ Goal:
 Study:
 
 \[
+$$
 \Delta p_{\text{weather forecast}}
+$$
 \rightarrow
+$$
 \Delta p_{\text{market}}
+$$
 \]
 
 Goal:
@@ -456,13 +504,21 @@ The project should not be framed as “I built a trading bot.”
 The research contribution is:
 
 \[
+$$
 \text{meteorological information}
+$$
 \rightarrow
+$$
 \text{probabilistic forecast}
+$$
 \rightarrow
+$$
 \text{market price}
+$$
 \rightarrow
+$$
 \text{cost-adjusted decision}
+$$
 \]
 
 The incremental skills relative to the existing portfolio are:
@@ -499,21 +555,33 @@ The correct goal is:
 The research has asymmetric value:
 
 \[
+$$
 \text{No alpha}
+$$
 \Rightarrow
+$$
 \text{useful research project}
+$$
 \]
 
 \[
+$$
 \text{Predictive edge but no PnL}
+$$
 \Rightarrow
+$$
 \text{strong market-efficiency result}
+$$
 \]
 
 \[
+$$
 \text{Persistent after-cost prospective alpha}
+$$
 \Rightarrow
+$$
 \text{research project + potential own-capital deployment}
+$$
 \]
 
 Whether the project can actually make money must be decided by the final frozen prospective evidence, not by the attractiveness of the idea.
@@ -535,7 +603,9 @@ Before live trading:
 The first live-money objective should be:
 
 \[
+$$
 \text{modeled PnL} \approx \text{realized PnL}
+$$
 \]
 
 not maximizing dollar profit.
