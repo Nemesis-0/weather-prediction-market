@@ -20,7 +20,18 @@ Across historical and prospective studies, the answer was **not established**. T
 
 V1/V2 use historical Kalshi weather-market data. V3 moves to prospective ForecastEx observation through IBKR, so the phases are treated as distinct empirical settings rather than pooled as one market sample.
 
-**Final study status:** the weather research program was closed as an active foreground research line after the pre-specified evidence failed to support additional investigation.
+**Project status: Closed.** The pre-specified evidence did not support further active investigation of the weather-market hypothesis.
+
+## Recommended reading order
+
+For a short technical review:
+
+1. [Weather-domain closure](docs/v3/weather_alpha_domain_closure_20261008.md) — final allocation decision and cross-study synthesis.
+2. [V1 final closure](results/final_v1/V1_FINAL_CLOSURE.md) — corrected point-in-time historical result.
+3. [V2 final closure](results/final_v2/V2_FINAL_CLOSURE.md) — forecast-revision / assimilation result.
+4. [V3 Study 2 closure](docs/v3/study2_closure.md) — settlement-aware executable screen and closure.
+
+The frozen-but-unlaunched Study 1 protocol and the full historical protocol trail are available through the [documentation index](docs/README.md).
 
 ## Selected findings
 
@@ -28,8 +39,8 @@ V1/V2 use historical Kalshi weather-market data. V3 moves to prospective Forecas
 
 A source-timing audit found four weather observations that were not actually public by the frozen decision time. After mechanical correction, the primary V1 comparison was:
 
-- M2 − M0 mean calendar-date log-loss delta: `+0.0144`
-- 3-day moving-block bootstrap 95% CI: `[-0.0376, +0.0863]`
+- M2 − M0 mean calendar-date log-loss delta: **+0.0144**
+- 3-day moving-block bootstrap 95% CI: **[-0.0376, +0.0863]**
 
 Negative values would favor the augmented weather model; the corrected result did not establish reliable incremental value.
 
@@ -39,13 +50,13 @@ V2 evaluated two frozen event-study questions.
 
 **H2.1 — first recorded post-publication response**
 
-- `beta = +0.02957`
-- 3-day moving-block bootstrap 95% CI: `[-0.01225, +0.08462]`
+- $\beta = 0.02957$
+- 3-day moving-block bootstrap 95% CI: $[-0.01225,\ 0.08462]$
 
 **H2.2 — later-window association**
 
-- `beta = -0.02814`
-- 3-day moving-block bootstrap 95% CI: `[-0.07276, +0.03360]`
+- $\beta = -0.02814$
+- 3-day moving-block bootstrap 95% CI: $[-0.07276,\ 0.03360]$
 
 Neither stage established a reliable positive directional effect.
 
@@ -55,7 +66,7 @@ The first admissible ready-window screen contained 78 apparent positive rows. Af
 
 - 76 of 78 apparent positives were blocked;
 - 2 diagnostic positives remained;
-- the largest remaining margin was about `$0.001624` per contract.
+- the largest remaining margin was about **$0.001624** per contract.
 
 The route was closed rather than retuned.
 
@@ -97,17 +108,6 @@ weather-prediction-market-research/
 ```
 
 Raw datasets, broker-session state, runtime market streams, logs, and exploratory local artifacts are intentionally excluded from public Git history.
-
-## Recommended reading order
-
-For a short technical review:
-
-1. [`docs/v3/weather_alpha_domain_closure_20261008.md`](docs/v3/weather_alpha_domain_closure_20261008.md) — final allocation decision and cross-study synthesis.
-2. [`results/final_v1/V1_FINAL_CLOSURE.md`](results/final_v1/V1_FINAL_CLOSURE.md) — corrected point-in-time historical result.
-3. [`results/final_v2/V2_FINAL_CLOSURE.md`](results/final_v2/V2_FINAL_CLOSURE.md) — forecast-revision / assimilation result.
-4. [`docs/v3/study2_closure.md`](docs/v3/study2_closure.md) — settlement-aware executable screen and closure.
-
-The frozen-but-unlaunched Study 1 protocol and the full historical protocol trail remain available through [`docs/README.md`](docs/README.md).
 
 ## Reproducibility
 
