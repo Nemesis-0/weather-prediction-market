@@ -52,19 +52,27 @@ For both the old and new NBS cycles, construct the same prespecified
 six-bucket weather proxy distribution used only as a feature
 transformation:
 
-    q_old
-    q_new
+$\mathbf{q}_{\mathrm{old}}$ and $\mathbf{q}_{\mathrm{new}}$
 
 from TXN and XND.
 
 Define bucket-level revision information using quantities such as:
 
-    delta_q_j = q_new_j - q_old_j
+$$
+\Delta q_j
+=
+q_{\mathrm{new},j} - q_{\mathrm{old},j}
+$$
 
 and/or
 
-    delta_log_odds_j =
-        logit(q_new_j) - logit(q_old_j)
+$$
+\Delta \operatorname{logit}(q_j)
+=
+\operatorname{logit}(q_{\mathrm{new},j})
+-
+\operatorname{logit}(q_{\mathrm{old},j})
+$$
 
 The exact final representation will be selected using V2 development data
 only and frozen before prospective evaluation.

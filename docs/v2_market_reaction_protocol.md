@@ -37,8 +37,7 @@ of subsequent market movement.
 
 For each revision event construct:
 
-    q_old
-    q_new
+$\mathbf{q}_{\mathrm{old}}$ and $\mathbf{q}_{\mathrm{new}}$
 
 the six-bucket weather-proxy probability vectors using the same Gaussian
 TXN/XND-to-bucket transformation previously specified in V1.
@@ -49,7 +48,11 @@ distribution.
 
 Define:
 
-    delta_q = q_new - q_old
+$$
+\Delta q
+=
+q_{\mathrm{new}} - q_{\mathrm{old}}
+$$
 
 No model fitting is involved in constructing delta_q.
 
@@ -65,15 +68,33 @@ At both PRE and POST +1H use synchronized six-bucket quote midpoints.
 
 For each market state:
 
-    raw midpoint_j = (YES bid_j + YES ask_j) / 2
+$$
+\mathrm{midpoint}_j
+=
+\frac{
+\mathrm{YES\ bid}_j + \mathrm{YES\ ask}_j
+}{2}
+$$
 
 Normalize jointly across the six mutually exclusive buckets:
 
-    p_j = midpoint_j / sum(midpoint)
+$$
+p_j
+=
+\frac{
+\mathrm{midpoint}_j
+}{
+\sum_k \mathrm{midpoint}_k
+}
+$$
 
 Define:
 
-    delta_p = p_post1h - p_pre
+$$
+\Delta p
+=
+p_{\mathrm{post1h}} - p_{\mathrm{pre}}
+$$
 
 Midpoints are used only to study probability movement.
 
@@ -85,9 +106,15 @@ They are not treated as executable trade prices.
 
 The primary estimand is the aggregate projection coefficient:
 
-                 sum_i sum_j delta_q_ij * delta_p_ij
-    beta = ------------------------------------------------
-                 sum_i sum_j delta_q_ij^2
+$$
+\beta
+=
+\frac{
+\sum_i \sum_j \Delta q_{ij}\,\Delta p_{ij}
+}{
+\sum_i \sum_j (\Delta q_{ij})^2
+}
+$$
 
 where:
 
@@ -96,7 +123,7 @@ where:
 
 Interpretation:
 
-    beta > 0
+$\beta > 0$
 
 means that, on average, market probability moved in the same direction
 as the newly published weather information.
@@ -123,12 +150,12 @@ from the same calendar date remain together during resampling.
 
 Primary uncertainty:
 
-    3-day moving-block bootstrap over calendar dates
+**3-day moving-block bootstrap over calendar dates**
 
 Sensitivity:
 
-    1-day blocks
-    7-day blocks
+- 1-day blocks
+- 7-day blocks
 
 Report a two-sided 95% confidence interval.
 
@@ -141,7 +168,7 @@ No bucket-level naive standard errors are permitted.
 Prespecified secondary outputs:
 
 - fraction of events with
-      dot(delta_q, delta_p) > 0;
+  $\Delta q^{\top}\Delta p > 0$;
 
 - POST +2H reaction coefficient using the already frozen clean +2H
   population;
@@ -149,9 +176,9 @@ Prespecified secondary outputs:
 - descriptive coefficients by city;
 
 - descriptive coefficients by revision transition:
-      prev18Z -> 00Z
-      00Z -> 06Z
-      06Z -> 12Z
+  - prev18Z → 00Z
+  - 00Z → 06Z
+  - 06Z → 12Z
 
 These subgroup results are descriptive only.
 
@@ -164,9 +191,7 @@ performance.
 
 Forecast-state transitions with:
 
-    delta_TXN = 0
-    and
-    delta_XND = 0
+$\Delta TXN = 0$ and $\Delta XND = 0$
 
 are not part of the primary directional-reaction test because delta_q is
 zero.

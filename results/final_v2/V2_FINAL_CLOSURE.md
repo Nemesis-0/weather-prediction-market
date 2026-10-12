@@ -69,40 +69,40 @@ Primary H2.1 population:
 
 Estimator:
 
-    beta_1h
-      =
-      sum_i(delta_q_i' delta_p_i)
-      /
-      sum_i(||delta_q_i||^2)
+$$
+\beta_{1h}
+=
+\frac{\sum_i \Delta q_i^{\top} \Delta p_i}
+{\sum_i \lVert \Delta q_i \rVert^2}
+$$
 
 where:
 
-    delta_q_i
+$\Delta q_i$
 
 is the frozen weather-proxy probability revision and:
 
-    delta_p_i
+$\Delta p_i$
 
 is the first recorded post-publication normalized Kalshi probability-vector
 change.
 
 Final H2.1 result:
 
-    beta_1h = +0.029570
+$\beta_{1h} = 0.029570$
 
 Primary 3-day moving-block bootstrap 95% CI:
 
-    [-0.012251, +0.084617]
+$[-0.012251,\ 0.084617]$
 
 Sensitivity:
 
-    1-day CI = [-0.019013, +0.088790]
-
-    7-day CI = [-0.000426, +0.074220]
+- 1-day CI: $[-0.019013,\ 0.088790]$
+- 7-day CI: $[-0.000426,\ 0.074220]$
 
 Positive-dot fraction:
 
-    0.520
+$0.520$
 
 Interpretation:
 
@@ -145,9 +145,9 @@ timing and synchronization audit.
 
 The weather revision vector was constructed strictly as:
 
-    delta_q
-      =
-      q_new - q_old
+$$
+\Delta q = q_{\mathrm{new}} - q_{\mathrm{old}}
+$$
 
 where q_old and q_new were generated only from:
 
@@ -166,17 +166,23 @@ Market PRE/POST movement was not used to define the weather direction.
 
 The primary market outcome was:
 
-    delta_p_later
-      =
-      p_POST2 - p_POST1
+$$
+\Delta p_{\mathrm{later}}
+=
+p_{\mathrm{POST2}} - p_{\mathrm{POST1}}
+$$
 
 The primary estimator was:
 
-    beta_later
-      =
-      sum_i(delta_q_i' delta_p_later_i)
-      /
-      sum_i(||delta_q_i||^2)
+$$
+\beta_{\mathrm{later}}
+=
+\frac{
+\sum_i \Delta q_i^{\top} \Delta p_{\mathrm{later},i}
+}{
+\sum_i \lVert \Delta q_i \rVert^2
+}
+$$
 
 The prior adjusted shared-POST1 regression was demoted before valid result
 inspection because POST1 appears in both the initial and later market changes.
@@ -189,25 +195,24 @@ The unadjusted projection above became the confirmatory primary statistic.
 
 Primary normalized later-window result:
 
-    beta_later = -0.02813775
+$\beta_{\mathrm{later}} = -0.02813775$
 
 Positive-dot fraction:
 
-    0.464
+$0.464$
 
 Zero-dot events:
 
-    0
+$0$
 
 Primary 3-day moving-block bootstrap 95% CI:
 
-    [-0.07276015, +0.03359751]
+$[-0.07276015,\ 0.03359751]$
 
 Sensitivity:
 
-    1-day CI = [-0.07969537, +0.02178450]
-
-    7-day CI = [-0.07177623, +0.03309736]
+- 1-day CI: $[-0.07969537,\ 0.02178450]$
+- 7-day CI: $[-0.07177623,\ 0.03309736]$
 
 Interpretation:
 
@@ -229,24 +234,23 @@ inspection.
 
 Exact synchronized placebo-start snapshots were structurally available for:
 
-    174 / 179 events
+**174 / 179 events**
 
 No interpolation, nearest-snapshot replacement, or alternative window was
 permitted.
 
 Result:
 
-    beta_placebo = -0.01851410
+$\beta_{\mathrm{placebo}} = -0.01851410$
 
 Primary 3-day 95% CI:
 
-    [-0.06127073, +0.01472115]
+$[-0.06127073,\ 0.01472115]$
 
 Sensitivity:
 
-    1-day CI = [-0.05872353, +0.01967436]
-
-    7-day CI = [-0.05585465, +0.01123688]
+- 1-day CI: $[-0.05872353,\ 0.01967436]$
+- 7-day CI: $[-0.05585465,\ 0.01123688]$
 
 Interpretation:
 
@@ -263,23 +267,24 @@ to sum to one.
 A mandatory frozen diagnostic repeated the directional projection using raw,
 unnormalized midpoint changes:
 
-    delta_m_later
-      =
-      m_POST2 - m_POST1
+$$
+\Delta m_{\mathrm{later}}
+=
+m_{\mathrm{POST2}} - m_{\mathrm{POST1}}
+$$
 
 Result:
 
-    beta_raw_midpoint = -0.02898768
+$\beta_{\text{raw midpoint}} = -0.02898768$
 
 Primary 3-day 95% CI:
 
-    [-0.07426099, +0.03362353]
+$[-0.07426099,\ 0.03362353]$
 
 Sensitivity:
 
-    1-day CI = [-0.08295631, +0.02146754]
-
-    7-day CI = [-0.07616479, +0.03271995]
+- 1-day CI: $[-0.08295631,\ 0.02146754]$
+- 7-day CI: $[-0.07616479,\ 0.03271995]$
 
 The raw-midpoint estimate is extremely close to the normalized primary
 estimate.
