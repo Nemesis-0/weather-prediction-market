@@ -69,12 +69,12 @@ Primary H2.1 population:
 
 Estimator:
 
-$$
+```math
 \beta_{1h}
 =
 \frac{\sum_i \Delta q_i^{\top} \Delta p_i}
 {\sum_i \lVert \Delta q_i \rVert^2}
-$$
+```
 
 where:
 
@@ -145,9 +145,9 @@ timing and synchronization audit.
 
 The weather revision vector was constructed strictly as:
 
-$$
+```math
 \Delta q = q_{\mathrm{new}} - q_{\mathrm{old}}
-$$
+```
 
 where q_old and q_new were generated only from:
 
@@ -166,15 +166,15 @@ Market PRE/POST movement was not used to define the weather direction.
 
 The primary market outcome was:
 
-$$
+```math
 \Delta p_{\mathrm{later}}
 =
 p_{\mathrm{POST2}} - p_{\mathrm{POST1}}
-$$
+```
 
 The primary estimator was:
 
-$$
+```math
 \beta_{\mathrm{later}}
 =
 \frac{
@@ -182,7 +182,7 @@ $$
 }{
 \sum_i \lVert \Delta q_i \rVert^2
 }
-$$
+```
 
 The prior adjusted shared-POST1 regression was demoted before valid result
 inspection because POST1 appears in both the initial and later market changes.
@@ -267,11 +267,11 @@ to sum to one.
 A mandatory frozen diagnostic repeated the directional projection using raw,
 unnormalized midpoint changes:
 
-$$
+```math
 \Delta m_{\mathrm{later}}
 =
 m_{\mathrm{POST2}} - m_{\mathrm{POST1}}
-$$
+```
 
 Result:
 

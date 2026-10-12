@@ -58,21 +58,21 @@ from TXN and XND.
 
 Define bucket-level revision information using quantities such as:
 
-$$
+```math
 \Delta q_j
 =
 q_{\mathrm{new},j} - q_{\mathrm{old},j}
-$$
+```
 
 and/or
 
-$$
+```math
 \Delta \operatorname{logit}(q_j)
 =
 \operatorname{logit}(q_{\mathrm{new},j})
 -
 \operatorname{logit}(q_{\mathrm{old},j})
-$$
+```
 
 The exact final representation will be selected using V2 development data
 only and frozen before prospective evaluation.

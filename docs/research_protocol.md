@@ -10,17 +10,17 @@ The project must pass two separate tests:
 
 ### Predictive hypothesis
 
-$$
+```math
 H_1:\quad M_{\text{market+weather}} > M_{\text{market-only}}
-$$
+```
 
 where improvement is measured with proper probabilistic scoring rules such as Brier score, log loss, and calibration diagnostics.
 
 ### Economic hypothesis
 
-$$
+```math
 H_2:\quad E[\text{net PnL}] > 0
-$$
+```
 
 where net PnL is evaluated using executable bid/ask prices, fees, execution assumptions, and any additional realistic trading frictions.
 
@@ -126,17 +126,17 @@ V1 should deliberately stay simple.
 
 ### Model 0 — Market-only
 
-$$
+```math
 M_0 = f(p_{\text{market}})
-$$
+```
 
 This is the main benchmark.
 
 ### Model 1 — Weather-only
 
-$$
+```math
 M_1 = f(X_{\text{weather}})
-$$
+```
 
 Possible inputs:
 
@@ -150,21 +150,21 @@ Possible inputs:
 
 ### Model 2 — Market + Weather
 
-$$
+```math
 M_2 = f(p_{\text{market}}, X_{\text{weather}})
-$$
+```
 
 The main scientific question is:
 
-$$
+```math
 P(Y=1\mid p_{\text{market}}, X_{\text{weather}})
-$$
+```
 
 versus:
 
-$$
+```math
 P(Y=1\mid p_{\text{market}})
-$$
+```
 
 The purpose is to test whether weather information contains **incremental information beyond the market**.
 
@@ -235,15 +235,15 @@ Same city-day contracts, multiple buckets, and repeated timestamps must not be t
 
 Let:
 
-$$
+```math
 \hat p
-$$
+```
 
 be the model’s estimated true probability.
 
 For a YES contract:
 
-$$
+```math
 EV_{\text{YES}}
 =
 \hat p
@@ -253,21 +253,21 @@ EV_{\text{YES}}
 \text{fee}
 -
 \text{other execution cost}
-$$
+```
 
 A simple frozen rule can be:
 
-$$
+```math
 \hat p - \text{ask} - \text{fee} > \delta
-$$
+```
 
 then buy YES.
 
 Otherwise:
 
-$$
+```math
 \text{NO TRADE}
-$$
+```
 
 The same logic applies to NO contracts.
 
@@ -300,21 +300,21 @@ Report at least:
 
 The project must distinguish:
 
-$$
+```math
 \text{forecasting alpha}
-$$
+```
 
 from:
 
-$$
+```math
 \text{tradeable alpha}
-$$
+```
 
 and from:
 
-$$
+```math
 \text{scalable alpha}
-$$
+```
 
 ---
 
@@ -340,9 +340,9 @@ A negative result is still a valid research result.
 
 ### Outcome A — No market-relative predictive edge
 
-$$
+```math
 M_{\text{market+weather}} \not> M_{\text{market-only}}
-$$
+```
 
 Interpretation:
 - public weather information appears already incorporated into prices
@@ -351,15 +351,15 @@ Interpretation:
 
 ### Outcome B — Predictive edge, no economic edge
 
-$$
+```math
 M_{\text{market+weather}} > M_{\text{market-only}}
-$$
+```
 
 but:
 
-$$
+```math
 E[\text{net PnL}] \le 0
-$$
+```
 
 Interpretation:
 - statistically useful information exists
@@ -402,9 +402,9 @@ Focus:
 ### Stage 2 — Intraday Updating
 Add:
 
-$$
+```math
 P(T_{\max} \mid \text{forecast + live observed trajectory})
-$$
+```
 
 Possible information:
 - observed temperature path
@@ -420,11 +420,11 @@ Goal:
 ### Stage 3 — Forecast Revision / Information Timing
 Study:
 
-$$
+```math
 \Delta p_{\text{weather forecast}}
 \rightarrow
 \Delta p_{\text{market}}
-$$
+```
 
 Goal:
 - measure how quickly market prices incorporate new public forecasts
@@ -455,7 +455,7 @@ The project should not be framed as “I built a trading bot.”
 
 The research contribution is:
 
-$$
+```math
 \text{meteorological information}
 \rightarrow
 \text{probabilistic forecast}
@@ -463,7 +463,7 @@ $$
 \text{market price}
 \rightarrow
 \text{cost-adjusted decision}
-$$
+```
 
 The methodological capabilities exercised by this design include:
 
@@ -498,23 +498,23 @@ The correct goal is:
 
 The research has asymmetric value:
 
-$$
+```math
 \text{No alpha}
 \Rightarrow
 \text{useful research project}
-$$
+```
 
-$$
+```math
 \text{Predictive edge but no PnL}
 \Rightarrow
 \text{strong market-efficiency result}
-$$
+```
 
-$$
+```math
 \text{Persistent after-cost prospective alpha}
 \Rightarrow
 \text{research project + potential own-capital deployment}
-$$
+```
 
 Whether the project can actually make money must be decided by the final frozen prospective evidence, not by the attractiveness of the idea.
 
@@ -532,8 +532,8 @@ Before any live validation:
 
 The first live-validation objective should be:
 
-$$
+```math
 \text{modeled PnL} \approx \text{realized PnL}
-$$
+```
 
 not maximizing dollar profit.

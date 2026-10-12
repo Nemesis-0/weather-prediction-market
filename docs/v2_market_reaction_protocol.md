@@ -48,11 +48,11 @@ distribution.
 
 Define:
 
-$$
+```math
 \Delta q
 =
 q_{\mathrm{new}} - q_{\mathrm{old}}
-$$
+```
 
 No model fitting is involved in constructing delta_q.
 
@@ -68,17 +68,17 @@ At both PRE and POST +1H use synchronized six-bucket quote midpoints.
 
 For each market state:
 
-$$
+```math
 \mathrm{midpoint}_j
 =
 \frac{
 \mathrm{YES\ bid}_j + \mathrm{YES\ ask}_j
 }{2}
-$$
+```
 
 Normalize jointly across the six mutually exclusive buckets:
 
-$$
+```math
 p_j
 =
 \frac{
@@ -86,15 +86,15 @@ p_j
 }{
 \sum_k \mathrm{midpoint}_k
 }
-$$
+```
 
 Define:
 
-$$
+```math
 \Delta p
 =
 p_{\mathrm{post1h}} - p_{\mathrm{pre}}
-$$
+```
 
 Midpoints are used only to study probability movement.
 
@@ -106,7 +106,7 @@ They are not treated as executable trade prices.
 
 The primary estimand is the aggregate projection coefficient:
 
-$$
+```math
 \beta
 =
 \frac{
@@ -114,7 +114,7 @@ $$
 }{
 \sum_i \sum_j (\Delta q_{ij})^2
 }
-$$
+```
 
 where:
 
