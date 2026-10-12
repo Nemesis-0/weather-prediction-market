@@ -12,11 +12,11 @@ Across historical and prospective studies, the answer was **not established**. T
 
 | Study | Question | Design | Final conclusion |
 |---|---|---|---|
-| **V1 — Static weather information** | Does public NOAA/NBM weather information add value beyond the 10 AM market state? | Frozen historical comparison with point-in-time source audit and block-bootstrap inference | No reliable incremental predictive or economic value after timing correction |
-| **V2 — Forecast revision / assimilation** | Do public forecast revisions predict subsequent market movement? | Frozen event studies of first-window and later-window reactions | No reliable positive directional assimilation effect |
-| **V3 Study 1 — Structural consistency** | Do nested ForecastEx weather contracts exhibit persistent executable inconsistencies? | Prospective protocol engineering and semantic validation | Protocol frozen; confirmatory collection not launched |
-| **V3 Study 2 — Settlement-aware nowcasting** | Can intraday weather state support a conservative edge over executable asks? | Prospective executable screen with settlement-source auditing | Apparent edge largely vanished after conditioning on already-observed settlement state |
-| **V3 mechanism screening** | Do simple structural, timing, or liquidity mechanisms survive executable screening? | Bounded semantic and market-structure triage | No candidate promoted to a positive executable-alpha claim |
+| [**V1 — Static weather information**](results/final_v1/V1_FINAL_CLOSURE.md) | Does public NOAA/NBM weather information add value beyond the 10 AM market state? | Frozen historical comparison with point-in-time source audit and block-bootstrap inference | No reliable incremental predictive or economic value after timing correction |
+| [**V2 — Forecast revision / assimilation**](results/final_v2/V2_FINAL_CLOSURE.md) | Do public forecast revisions predict subsequent market movement? | Frozen event studies of first-window and later-window reactions | No reliable positive directional assimilation effect |
+| [**V3 Study 1 — Structural consistency**](docs/v3/study1_final_frozen_protocol.md) | Do nested ForecastEx weather contracts exhibit persistent executable inconsistencies? | Prospective protocol engineering and semantic validation | Protocol frozen; confirmatory collection not launched |
+| [**V3 Study 2 — Settlement-aware nowcasting**](docs/v3/study2_closure.md) | Can intraday weather state support a conservative edge over executable asks? | Prospective executable screen with settlement-source auditing | Apparent edge largely vanished after conditioning on already-observed settlement state |
+| [**V3 mechanism screening**](docs/v3/weather_alpha_domain_closure_20261008.md) | Do simple structural, timing, or liquidity mechanisms survive executable screening? | Bounded semantic and market-structure triage | No candidate promoted to a positive executable-alpha claim |
 
 V1/V2 use historical Kalshi weather-market data. V3 moves to prospective ForecastEx observation through IBKR, so the phases are treated as distinct empirical settings rather than pooled as one market sample.
 
