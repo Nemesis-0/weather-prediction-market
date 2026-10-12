@@ -15,10 +15,14 @@ that context.
 
 1. [`weather_alpha_domain_closure_20261008.md`](weather_alpha_domain_closure_20261008.md) - final domain-level allocation decision.
 2. [`study2_closure.md`](study2_closure.md) - closed settlement-aware M0 route and settlement-state diagnostic.
-3. [`alpha_funnel_phase2_checkpoint_20261008.md`](alpha_funnel_phase2_checkpoint_20261008.md) - final structural/timing alpha-search checkpoint before domain retirement.
-4. [`study1_final_frozen_protocol.md`](study1_final_frozen_protocol.md) - final frozen Study 1 protocol; confirmatory collection never started.
-5. [`research_charter.md`](research_charter.md) - historical V3 research-governance charter.
-6. [`api_capability_audit.md`](api_capability_audit.md) - retained infrastructure audit.
+3. [`study1_final_frozen_protocol.md`](study1_final_frozen_protocol.md) - final frozen Study 1 protocol; confirmatory collection never started.
+4. [`research_charter.md`](research_charter.md) - historical V3 research-governance charter.
+5. [`api_capability_audit.md`](api_capability_audit.md) - retained infrastructure audit.
+6. [`legal/README.md`](legal/README.md) - provenance note for the frozen third-party ForecastEx terms snapshot.
+
+Detailed structural/timing alpha-funnel working checkpoints are retained only in
+the local/private research workspace. Their public conclusion is summarized in
+the final domain closure above.
 
 V1/V2 historical documentation remains one directory level above and is not
 reopened or retuned as part of V3 closure.
@@ -47,5 +51,8 @@ is no longer current:
 - frozen pre-run protocols;
 - implementation and economic-kill contracts.
 
-Their purpose is to preserve what was specified and known at each stage. Use the
-final domain closure for the present-tense project state.
+Their purpose is to preserve what was specified and known at each stage. Some frozen
+Study 1 documents retain the historical internal label `Sol Max`; this denotes an
+independent adversarial review checkpoint. Those files are intentionally left unchanged
+so that frozen manifests and protocol provenance remain valid. Use the final domain
+closure for the present-tense project state.

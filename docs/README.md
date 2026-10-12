@@ -47,19 +47,28 @@ include:
 These files are historical scientific records. They should not be rewritten
 merely to make old status language look current.
 
+Some frozen V1 records retain references to a local pre-correction archive used
+during timing correction. That archive is not distributed in the final public
+repository; the tracked post-correction audits and final V1 closure are the
+canonical public record.
+
 ## V3 documentation
 
 Canonical V3 records now include:
 
 - [`v3/weather_alpha_domain_closure_20261008.md`](v3/weather_alpha_domain_closure_20261008.md) - final domain-level allocation decision.
 - [`v3/study2_closure.md`](v3/study2_closure.md) - current M0 settlement-aware route closure.
-- [`v3/alpha_funnel_phase2_checkpoint_20261008.md`](v3/alpha_funnel_phase2_checkpoint_20261008.md) - final structural quick-screen checkpoint before domain retirement.
+- Static structural/timing screening is summarized in the final domain closure; detailed alpha-funnel working checkpoints remain in the local/private research workspace and are not part of the public repository.
 - [`v3/study1_final_frozen_protocol.md`](v3/study1_final_frozen_protocol.md) - final pre-D0 Study 1 protocol; confirmatory collection never started.
 - [`v3/research_charter.md`](v3/research_charter.md) - historical V3 governance charter; superseded for current status by the final domain closure.
 - [`v3/api_capability_audit.md`](v3/api_capability_audit.md) - infrastructure audit retained for reproducibility.
 
 Pre-freeze, remediation, acceptance, and adversarial-review documents are kept as
-provenance but are not recommended as first-entry reading for the project.
+provenance but are not recommended as first-entry reading for the project. Some frozen
+Study 1 records preserve the historical internal label `Sol Max`; in this public closeout,
+that label should be read simply as an independent adversarial review checkpoint. The
+historical files themselves are not renamed or rewritten because frozen manifests and
+protocol provenance take precedence over cosmetic normalization.
 
 ## Result and data guides
 

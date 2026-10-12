@@ -449,7 +449,7 @@ Research:
 
 ---
 
-## 13. Application Value
+## 13. Research Contribution
 
 The project should not be framed as “I built a trading bot.”
 
@@ -465,7 +465,7 @@ $$
 \text{cost-adjusted decision}
 $$
 
-The incremental skills relative to the existing portfolio are:
+The methodological capabilities exercised by this design include:
 
 - market microstructure
 - point-in-time data engineering
@@ -484,7 +484,7 @@ or:
 
 ---
 
-## 14. Money-Making Interpretation
+## 14. Interpretation of Economic Evidence
 
 At project start, profitability is **unknown**.
 
@@ -520,19 +520,17 @@ Whether the project can actually make money must be decided by the final frozen 
 
 ---
 
-## 15. Before Any Real-Money Deployment
+## 15. Preconditions for Live Validation
 
-Before live trading:
+Before any live validation:
 
-- verify current platform eligibility
-- verify current state / jurisdiction rules
-- verify F-1 / own-account activity implications as needed
+- verify current platform eligibility and jurisdictional rules
 - begin with very small capital
 - compare simulated and realized execution
 - verify actual fills, latency, fees, and settlement behavior
 - never scale based on historical backtest alone
 
-The first live-money objective should be:
+The first live-validation objective should be:
 
 $$
 \text{modeled PnL} \approx \text{realized PnL}

@@ -147,8 +147,9 @@ all 67 were static over the 15-second diagnostic interval. That result was not
 used to kill daytime microstructure; it was used only to avoid over-interpreting
 an inactive overnight regime.
 
-Canonical checkpoint:
-[`alpha_funnel_phase2_checkpoint_20261008.md`](alpha_funnel_phase2_checkpoint_20261008.md).
+The detailed alpha-funnel checkpoint is retained in the local/private research
+workspace rather than distributed in the public repository. This domain closure
+is the canonical public interpretation of that screening stage.
 
 ## 3. Final alpha-family status
 

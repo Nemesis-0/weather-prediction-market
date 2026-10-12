@@ -1,4 +1,4 @@
-# Python
+# Python / test tooling
 .venv/
 venv/
 __pycache__/
@@ -19,18 +19,22 @@ __pycache__/
 .vscode/
 .idea/
 
-# Secrets / credentials
+# Secrets / credentials / local broker state
 .env
 .env.*
 *.pem
 *.key
+secrets/
+credentials/
+configs/v3/local/
+runtime/
+*.session
+*.cookiejar
 
-# Logs
+# Local generated artifacts / logs / review bundles
+local_artifacts/
 logs/
 *.log
-
-# Local backups / review bundles
-local_artifacts/
 *.zip
 repo_audit_for_review.txt
 
@@ -38,6 +42,7 @@ repo_audit_for_review.txt
 archive/
 
 # Raw and processed working datasets
+# Only the data provenance README is public.
 data/**
 !data/README.md
 
@@ -48,49 +53,20 @@ results/historical_economics/
 results/corrected_historical/
 results/corrected_historical_economics/
 
-# Original H2.1 machine-specific frozen manifest.
-# Preserved locally unchanged because editing it would alter provenance.
+# Historical H2.1 machine-specific manifest, if reconstructed locally.
+# It is intentionally not distributed in the final public repository.
 results/v2_market_reaction/v2_market_reaction_manifest.txt
 
-# V3 local runtime / authentication state
-runtime/
-secrets/
-configs/v3/local/
-*.session
-*.cookiejar
-
-# ============================================================
-# Local/private research workspace — intentionally not public
-# ============================================================
-
-# Generated/local artifacts
-local_artifacts/
-logs/
-runtime/
-.pytest_cache/
-__pycache__/
-*.pyc
-.DS_Store
-
-# Ongoing alpha-discovery research
+# Local/private alpha-discovery workspace — intentionally not public
 configs/v3/alpha_*
 scripts/v3/*alpha*
 tests/v3/test_alpha_*
 src/v3/discovery/
-
-# Internal alpha checkpoints
+src/v3/alpha_funnel/
+docs/v3/alpha_funnel_v1.md
 docs/v3/alpha_funnel_phase2_checkpoint_*.md
 
-# Credentials / sessions
-.env
-.env.*
-secrets/
-credentials/
-
-# Internal alpha-funnel implementation
-docs/v3/alpha_funnel_v1.md
-src/v3/alpha_funnel/
-# Local recovery material
+# Local recovery material retained only during closeout
 RECOVERY_MANIFEST_SHA256.txt
 RECOVERY_README.md
 recovery_evidence/

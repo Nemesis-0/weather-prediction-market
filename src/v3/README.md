@@ -8,35 +8,20 @@ infrastructure. See
 Historical V1/V2 code and canonical results remain frozen and must not be
 retuned using the closed historical sample.
 
-## Package structure
+## Public package structure
 
 - `ibkr/`
-  IBKR session handling, instrument discovery, and market-data interfaces.
-
-- `contracts/`
-  Contract registry, YES/NO pairing, threshold geometry,
-  and settlement-rule normalization.
-
-- `collector/`
-  Prospective market-data collection, connection health,
-  reconnect handling, and feed-gap logging.
-
-- `weather/`
-  Point-in-time weather publications, station observations,
-  running daily maximum, and later nowcasting inputs.
-
-- `signals/`
-  Prospective alpha-family and signal namespaces.
-
-- `execution/`
-  Fees, slippage, latency assumptions, shadow execution,
-  and execution-validation support.
+  IBKR session handling and market-data interfaces used by the prospective V3
+  infrastructure.
 
 - `audit/`
-  Timing, synchronization, data gaps, settlement mapping,
-  and research-integrity checks.
+  Public timing, synchronization, capability, and research-integrity support.
 
-- `study1/`, `study2/`, `alpha_funnel/`
-  Preserved implementations for the V3 research stages and their closure
-  evidence. Their presence does not imply that the corresponding strategy is
+- `study1/`, `study2/`
+  Preserved public implementations for the two documented V3 study stages and
+  their closure evidence. Their presence does not imply that a strategy is
   active or profitable.
+
+The final public closeout contains only implemented, documented V3 packages.
+Internal alpha-funnel / discovery code remains in the local/private research
+workspace and is intentionally not distributed here.

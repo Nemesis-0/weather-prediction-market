@@ -75,13 +75,14 @@ Canonical closure:
 
 `docs/v3/study2_closure.md`
 
-## Alpha Funnel tooling
+## Private alpha-screening tooling
 
-The Alpha Funnel scripts are retained as a quick-screen / triage harness.
-Completed static structural screening produced no PROMOTE survivor. Trigger-
-dependent residual mechanisms are passive-watch only under the final weather
-domain decision.
+Additional alpha-funnel / triage scripts were used in the local research
+workspace after the core weather studies. They are intentionally not distributed
+in the public repository. Completed structural screening produced no promoted
+executable-alpha candidate, and trigger-dependent residual mechanisms were moved
+to passive watch under the final weather-domain decision.
 
-Canonical checkpoint:
+The canonical public interpretation is:
 
-`docs/v3/alpha_funnel_phase2_checkpoint_20261008.md`
+`docs/v3/weather_alpha_domain_closure_20261008.md`

@@ -43,16 +43,16 @@ records and should not be edited.
 
 ## V3 prospective-data policy
 
-V3 begins prospectively. Raw market and weather information should be captured
-as it is observed rather than reconstructed later whenever the research claim
-depends on timing or executability.
+V3 was designed as a prospective program: when a research claim depended on
+timing or executability, market and weather information was to be captured as
+observed rather than reconstructed later.
 
 Prospective V3 runtime data are intentionally excluded from Git. The tracked
-repository should contain schemas, collection code, integrity rules, frozen
-research configuration, and selected non-sensitive canonical outputs — not the
-full raw stream.
+repository contains schemas, collection code, integrity rules, frozen research
+configuration, and selected non-sensitive canonical outputs — not the full raw
+stream.
 
-The future collector must follow these rules:
+The prospective collection policy required these rules:
 
 - preserve the raw provider payload or a lossless raw-event representation;
 - record a local wall-clock receive timestamp;
@@ -69,6 +69,7 @@ The future collector must follow these rules:
   tax identifiers, identity-document information, or exact residential
   addresses in research data.
 
-The first V3 schemas should be frozen only after the active
-[`API capability audit`](../docs/v3/api_capability_audit.md) establishes what
-fields and timestamp semantics are actually available.
+V3 schema freezing was gated on the
+[`API capability audit`](../docs/v3/api_capability_audit.md), which documented
+what fields and timestamp semantics were available before prospective protocol
+freezes were treated as operational.

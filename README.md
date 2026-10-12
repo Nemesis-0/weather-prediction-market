@@ -16,9 +16,11 @@ Across historical and prospective studies, the answer was **not established**. T
 | **V2 — Forecast revision / assimilation** | Do public forecast revisions predict subsequent market movement? | Frozen event studies of first-window and later-window reactions | No reliable positive directional assimilation effect |
 | **V3 Study 1 — Structural consistency** | Do nested ForecastEx weather contracts exhibit persistent executable inconsistencies? | Prospective protocol engineering and semantic validation | Protocol frozen; confirmatory collection not launched |
 | **V3 Study 2 — Settlement-aware nowcasting** | Can intraday weather state support a conservative edge over executable asks? | Prospective executable screen with settlement-source auditing | Apparent edge largely vanished after conditioning on already-observed settlement state |
-| **V3 mechanism screening** | Do simple structural, timing, or liquidity mechanisms survive executable screening? | High-throughput semantic and market-structure triage | No candidate promoted to a positive executable-alpha claim |
+| **V3 mechanism screening** | Do simple structural, timing, or liquidity mechanisms survive executable screening? | Bounded semantic and market-structure triage | No candidate promoted to a positive executable-alpha claim |
 
-**Final study status:** the weather research program was closed after the pre-specified evidence failed to support additional foreground investigation.
+V1/V2 use historical Kalshi weather-market data. V3 moves to prospective ForecastEx observation through IBKR, so the phases are treated as distinct empirical settings rather than pooled as one market sample.
+
+**Final study status:** the weather research program was closed as an active foreground research line after the pre-specified evidence failed to support additional investigation.
 
 ## Selected findings
 
@@ -100,14 +102,12 @@ Raw datasets, broker-session state, runtime market streams, logs, and explorator
 
 For a short technical review:
 
-1. [`docs/v3/weather_alpha_domain_closure_20261008.md`](docs/v3/weather_alpha_domain_closure_20261008.md)
-2. [`results/final_v1/V1_FINAL_CLOSURE.md`](results/final_v1/V1_FINAL_CLOSURE.md)
-3. [`results/final_v2/V2_FINAL_CLOSURE.md`](results/final_v2/V2_FINAL_CLOSURE.md)
-4. [`docs/v3/study2_closure.md`](docs/v3/study2_closure.md)
-5. [`docs/v3/study1_final_frozen_protocol.md`](docs/v3/study1_final_frozen_protocol.md)
-6. [`docs/research_protocol.md`](docs/research_protocol.md)
+1. [`docs/v3/weather_alpha_domain_closure_20261008.md`](docs/v3/weather_alpha_domain_closure_20261008.md) — final allocation decision and cross-study synthesis.
+2. [`results/final_v1/V1_FINAL_CLOSURE.md`](results/final_v1/V1_FINAL_CLOSURE.md) — corrected point-in-time historical result.
+3. [`results/final_v2/V2_FINAL_CLOSURE.md`](results/final_v2/V2_FINAL_CLOSURE.md) — forecast-revision / assimilation result.
+4. [`docs/v3/study2_closure.md`](docs/v3/study2_closure.md) — settlement-aware executable screen and closure.
 
-A fuller documentation index is available in [`docs/README.md`](docs/README.md).
+The frozen-but-unlaunched Study 1 protocol and the full historical protocol trail remain available through [`docs/README.md`](docs/README.md).
 
 ## Reproducibility
 

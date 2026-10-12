@@ -10,15 +10,21 @@ results.
 - [V2 final closure](final_v2/V2_FINAL_CLOSURE.md)
 - [V3 / weather-domain final allocation closure](../docs/v3/weather_alpha_domain_closure_20261008.md)
 
+The frozen V1 closure and manifest retain historical references to a local
+pre-correction archive used during the timing-correction workflow. That local
+archive is not distributed in the public repository; the tracked post-correction
+audit outputs and final closure are the canonical public V1 record.
+
 ## V2 H2.1 - first recorded post-publication response
 
 - [H2.1 summary](v2_market_reaction/v2_market_reaction_summary.txt)
 - [By-city descriptive results](v2_market_reaction/v2_market_reaction_by_city.csv)
 - [By-transition descriptive results](v2_market_reaction/v2_market_reaction_by_transition.csv)
 
-The original H2.1 machine-specific manifest is preserved locally but excluded
-from the public repository because it contains an absolute local filesystem
-path.
+The original H2.1 machine-specific manifest was part of the local analysis
+workflow but is not distributed in the final public closeout because it embeds
+an absolute local filesystem path. Canonical public H2.1 results are the files
+listed above.
 
 ## V2 H2.2 - later-window post-publication association
 
