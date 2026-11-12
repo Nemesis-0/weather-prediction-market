@@ -70,3 +70,21 @@ docs/v3/alpha_funnel_phase2_checkpoint_*.md
 RECOVERY_MANIFEST_SHA256.txt
 RECOVERY_README.md
 recovery_evidence/
+
+# Reorganized V3 paths (secrets, private research and runtime data)
+research/v3/configs/local/
+research/v3/configs/alpha_*
+research/v3/code/discovery/
+research/v3/code/alpha_funnel/
+research/v3/code/cli/*alpha*
+research/v3/tests/test_alpha_*
+research/v3/docs/alpha_funnel_v1.md
+research/v3/docs/alpha_funnel_phase2_checkpoint_*.md
+
+# Reorganized historical regenerable output folders (canonical final tables remain tracked)
+research/v1/results/development/
+research/v1/results/historical_holdout/
+research/v1/results/historical_economics/
+research/v1/results/corrected_historical/
+research/v1/results/corrected_historical_economics/
+research/v2/results/market_reaction/v2_market_reaction_manifest.txt

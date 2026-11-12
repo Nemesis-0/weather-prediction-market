@@ -1,0 +1,57 @@
+{
+  "type": "V3_STUDY1_PATH_ONLY_REORGANIZATION_RUNTIME_INTEGRITY",
+  "original_freeze_manifest_sha256": "a428512e20036d07af5a875e327b995aa8e5ca65df36ad8c130ef4f9b56f835b",
+  "original_parent_commit": "b698f85c63858ae372d918118c4f1cb822fd4cb7",
+  "warning": "Runtime hashes validate moved code; ORIGINAL frozen hashes remain authoritative only for the historical Git snapshot. This reorganization is not a new confirmatory freeze.",
+  "core_files": {
+    "configs/v3/study1_confirmatory_frozen.json": {
+      "original_sha256": "cfb46ea069c196753103ce7f04bfca0acd8c2c6161978be7547ff3f5cbd6c18f",
+      "original_bytes": 7065,
+      "new_path": "research/v3/configs/study1_confirmatory_frozen.json",
+      "runtime_sha256": "cfb46ea069c196753103ce7f04bfca0acd8c2c6161978be7547ff3f5cbd6c18f",
+      "runtime_bytes": 7065
+    },
+    "docs/v3/study1_final_frozen_protocol.md": {
+      "original_sha256": "4b69316f689f3620461e26d4dfef0bc0a41169f3962da15e40cd7d4136b859bf",
+      "original_bytes": 8152,
+      "new_path": "research/v3/docs/study1_final_frozen_protocol.md",
+      "runtime_sha256": "4b69316f689f3620461e26d4dfef0bc0a41169f3962da15e40cd7d4136b859bf",
+      "runtime_bytes": 8152
+    },
+    "docs/v3/legal/DailyTemperatureTermsandConditions_2026-10-06.pdf": {
+      "original_sha256": "226826cb5d64cddc52c86b99a2e908f25ba48aa431f6c9ffe2c30e55731db511",
+      "original_bytes": 189351,
+      "new_path": "research/v3/docs/legal/DailyTemperatureTermsandConditions_2026-10-06.pdf",
+      "runtime_sha256": "226826cb5d64cddc52c86b99a2e908f25ba48aa431f6c9ffe2c30e55731db511",
+      "runtime_bytes": 189351
+    },
+    "scripts/v3/run_study1_confirmatory_day.py": {
+      "original_sha256": "2e8e46b16d6143fab9036312e9f817c2d31da65b8541eae05a91e70bd73fb08b",
+      "original_bytes": 15395,
+      "new_path": "research/v3/code/cli/run_study1_confirmatory_day.py",
+      "runtime_sha256": "eb546ccaebe79824ff6e3b26a5bd4498f74f5a8ec0210f565d641563062053fc",
+      "runtime_bytes": 15482
+    },
+    "scripts/v3/evaluate_study1_after_endpoint.py": {
+      "original_sha256": "8f509b3b2c139aace5130eba73b6e4155dff7285df01a4645597ccbf2f054053",
+      "original_bytes": 6502,
+      "new_path": "research/v3/code/cli/evaluate_study1_after_endpoint.py",
+      "runtime_sha256": "73c634db74b8c3b027bc13cc6e55c2077a36ce717e70b5a51d48bf49b9261076",
+      "runtime_bytes": 6521
+    },
+    "src/v3/study1/confirmatory.py": {
+      "original_sha256": "3b236178326b1bbf2053de6d2c7233bc75ebe5f6f0c638793c0fa5fa217dd477",
+      "original_bytes": 31421,
+      "new_path": "research/v3/code/study1/confirmatory.py",
+      "runtime_sha256": "876eb248565a260fd85a59741a256d5d73b7f92ea79226e17119d823fcf5a113",
+      "runtime_bytes": 31451
+    },
+    "src/v3/study1/frozen.py": {
+      "original_sha256": "0771a63b4d6851ad778b9baec55ceea83d71c7680d4e91eea998dd2f8b4e6907",
+      "original_bytes": 23632,
+      "new_path": "research/v3/code/study1/frozen.py",
+      "runtime_sha256": "9d686d1a9191f7b6cc1d57494d675549f48115506b7d823f9885ac2c1d20a844",
+      "runtime_bytes": 25009
+    }
+  }
+}
