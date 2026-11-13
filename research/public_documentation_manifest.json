@@ -1,0 +1,55 @@
+{
+  "baseline_commit": "74f672b",
+  "schema_version": 1,
+  "scope": "Post-reorganization public research documentation revision; historical migration_ledger.json remains unchanged. No scientific closure, original frozen protocol, historical results, model or IBKR code is edited.",
+  "updated_files": {
+    "DATA_POLICY.md": {
+      "current_bytes": 4111,
+      "current_sha256": "3023f05f8d9a76d9bdab60922ee24dcfe3d9b4018728edc10118c9cc16b7ec4c",
+      "migration_bytes": 3887,
+      "migration_sha256": "5ef7312f95e868cc024e9e075ffdfb743e7e4f703a1637e41349a1451cc74624"
+    },
+    "README.md": {
+      "current_bytes": 15154,
+      "current_sha256": "0424dcccf414d70f66c94f9b31676a4822d66dd4c189bdb5c4d331610e9b5b4b",
+      "migration_bytes": 2739,
+      "migration_sha256": "b4e03ffcb4e6cfd1f3b14e1567d65aabc2069f68653d9391886376d779b836d3"
+    },
+    "research/README.md": {
+      "current_bytes": 2900,
+      "current_sha256": "53d2b389c53b57f720cb8d0319748f0a0f66f0093b53ae93a8cc3382409b5cfc",
+      "migration_bytes": 814,
+      "migration_sha256": "71c146381eeadee9a1954d85de59d120527ab97cace3349c55ad4d73c1c6aa42"
+    },
+    "research/reorganization_verify.py": {
+      "current_bytes": 4247,
+      "current_sha256": "5c12ac32e39415979894dcacace80baf56c1fb33a9c0443675ac816b19ba7f75",
+      "migration_bytes": 2455,
+      "migration_sha256": "dd652860bcec6ac4df88534b79042dbe55d1322aeff561023abcae002e5c14fa"
+    },
+    "research/shared/README.md": {
+      "current_bytes": 1050,
+      "current_sha256": "bc87d24318b096d47ff22a498ccbdfc19aafcf4967056ce1dafc1df09b527c60",
+      "migration_bytes": 398,
+      "migration_sha256": "076e7c99f93e025082db144cf855a3d643093b7b926050e4ab5b1a46abf39895"
+    },
+    "research/v1/README.md": {
+      "current_bytes": 6155,
+      "current_sha256": "f8c5c26b75f492c761a2319aedc04a3584f75dc994831611e4b95843bbd710ed",
+      "migration_bytes": 720,
+      "migration_sha256": "f9dde43d812ca5598e5b3fe88c6435e6994059d0f770b86797685ad72ce3f1c1"
+    },
+    "research/v2/README.md": {
+      "current_bytes": 6043,
+      "current_sha256": "687cffe0c5ec921ff1e069957c1133fb2f5fea3e04d5d18c90d3d42b5fee2ef1",
+      "migration_bytes": 709,
+      "migration_sha256": "8a8bfd96c8e237ad4f9bc94d1a67b3bd1abb478bdd31cfdcf89feda9694d4956"
+    },
+    "research/v3/README.md": {
+      "current_bytes": 8299,
+      "current_sha256": "98031ef3b590baf5659f9dc9cc51239a5c95d8b8c197789dcb70f86fc37a3c12",
+      "migration_bytes": 992,
+      "migration_sha256": "feb121fa3947a3564ebc416e725105250e046805d6a1472a4d4fb509001dcc83"
+    }
+  }
+}

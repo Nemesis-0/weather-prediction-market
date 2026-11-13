@@ -1,81 +1,44 @@
-# Data and local-storage policy
+# Data sources, provenance and reproducibility
 
-The complete working datasets are intentionally not committed to this
-repository.
+This repository publishes **research code, protocols, frozen study records, selected final tables and integrity checks**, but not the full historical raw-market/weather archives or private brokerage runtime data.
 
-The historical analysis used two primary external data sources:
+## Sources by study
 
-- Kalshi historical market data for daily maximum-temperature contracts.
-- NOAA/NBM NBS forecast data with source-backed publication timing.
+| Study | Market data | Non-market information | Reproducibility boundary |
+|:--|:--|:--|:--|
+| V1 | Historical Kalshi daily-maximum-temperature six-bucket contracts | NOAA/NBM NBS `TXN` / `XND`; source-verified publication timing | The 46-date public results and protocols are retained; full raw archives are not included |
+| V2 | Historical Kalshi hourly market candles | Sequential NOAA/NBM revisions with source-backed release times | Published event metrics, summary tables and frozen protocols are retained; full source archives are not included |
+| V3 | Prospective IBKR / ForecastEx contract metadata and observed quotes | Settlement specifications and available settlement-relevant weather state | Read-only source code, audit documents, schemas and deterministic tests are public; broker sessions and raw runtime streams are not |
 
-The local research workspace contains raw source files and processed panels
-that are substantially larger than the final research outputs. Public Git
-history therefore contains the analysis code, protocols, audits, and final
-result tables rather than the full working data directory.
+## Point-in-time information integrity
 
-## Reconstruction code
+A scientific statement about a market decision depends on what was knowable **at that moment**. In this project that requires attention to:
 
-Relevant market-data code is under:
+- The difference between nominal weather-model cycle time and **demonstrated public publication time**.
+- The difference between market candle timestamps, broker update timestamps, local receive timestamps and verified exchange time.
+- The precise contract identity, settlement site/source, threshold, comparator, event date, and payout/cancellation rules.
+- Missing data, stale/delayed quotes, order-book availability and mismatched observation windows.
+- Explicitly preserving original observations; not silently replacing historical inputs with information learned later.
 
-- [`../src/market/`](research/shared/code/market)
-- [`../src/market/backfill_twc_candles.py`](research/shared/code/market/backfill_twc_candles.py)
-- [`../src/market/build_panel.py`](research/shared/code/market/build_panel.py)
+In V1, a publication-timing audit resulted in the documented mechanical correction of four weather inputs. The final corrected evaluation is **not described as an untouched holdout**. [Read the final V1 closure](research/v1/results/final/V1_FINAL_CLOSURE.md).
 
-Relevant weather-data code is under:
+In V3, settlement information already observable at the decision time invalidated most of one model's apparent positive candidates. [Read the V3 Study 2 closure](research/v3/docs/study2_closure.md).
 
-- [`../src/weather/`](research/shared/code/weather)
-- [`../src/weather/backfill_nbm.py`](research/shared/code/weather/backfill_nbm.py)
+## Reconstruction code and public outputs
 
-Point-in-time and timing audits are under:
+- [Kalshi market-data collection and panel code](research/shared/code/market/)
+- [NBM weather-data processing](research/shared/code/weather/)
+- [Shared historical feature assembly](research/shared/code/modeling/)
+- [V1 point-in-time auditing](research/v1/code/audit/) and [final tables](research/v1/results/final/)
+- [V2 revision-event code](research/v2/code/) and [final closure](research/v2/results/final/V2_FINAL_CLOSURE.md)
+- [V3 IBKR/ForecastEx modules](research/v3/code/), [schemas](research/v3/schemas/) and [tests](research/v3/tests/)
 
-- [`../src/audit/`](research/v1/code/audit)
+The original source datasets are not fully redistributed, and some archived freeze manifests refer to local artifacts that are not present in the public Git tree. Thus **a successful deterministic test run is not proof that the full historical V1/V2 analysis has been reproduced from its raw inputs**.
 
-The final scientific results are retained under:
+## Sensitive information and local data
 
-- [`../results/final_v1/`](research/v1/results/final)
-- [`../results/final_v2/`](research/v2/results/final)
-- [`../results/v2_market_reaction/`](research/v2/results/market_reaction)
-- [`../results/v2_residual_assimilation/`](research/v2/results/residual_assimilation)
+Local `.venv/`, `data/`, `runtime/`, `local_artifacts/` and similar working directories may exist on the research machine without being tracked by Git. Raw broker responses, session state and personal account information are intentionally excluded from the public repository.
 
-Some freeze manifests reference local data artifacts that are not redistributed
-in this repository. Those manifests are preserved as historical provenance
-records and should not be edited.
+The project does not publish credentials, tokens, account or financial identifiers, tax or identity records, or residential addresses. The public code and schemas support auditability without disclosing these private runtime materials.
 
-## V3 prospective-data policy
-
-V3 was designed as a prospective program: when a research claim depended on
-timing or executability, market and weather information was to be captured as
-observed rather than reconstructed later.
-
-Prospective V3 runtime data are intentionally excluded from Git. The tracked
-repository contains schemas, collection code, integrity rules, frozen research
-configuration, and selected non-sensitive canonical outputs — not the full raw
-stream.
-
-The prospective collection policy required these rules:
-
-- preserve the raw provider payload or a lossless raw-event representation;
-- record a local wall-clock receive timestamp;
-- record a local monotonic receive timestamp for ordering / latency diagnostics;
-- retain provider timestamps with their exact documented semantics;
-- never call a broker update timestamp an exchange timestamp without support;
-- record contract / settlement metadata needed to interpret each quote;
-- retain collector-health, reconnect, and feed-gap events;
-- keep raw events append-only / immutable after capture;
-- version derived transformations rather than overwriting raw information;
-- never backfill information that was not actually available at the historical
-  decision time into a prospective record;
-- never store brokerage credentials, account identifiers, bank information,
-  tax identifiers, identity-document information, or exact residential
-  addresses in research data.
-
-V3 schema freezing was gated on the
-[`API capability audit`](research/v3/docs/api_capability_audit.md), which documented
-what fields and timestamp semantics were available before prospective protocol
-freezes were treated as operational.
-
-## Repository reorganization (2026-11-12)
-
-The old tracked `data/README.md` has become this root policy page. Any **untracked** local `data/` datasets are not moved or deleted by the upgrade, and continue to be ignored. V1/V2 historical source-data paths in archived scripts remain relative to the repository root.
-
-A future V4 may maintain Git-tracked, appropriately redacted, append-only small decision/label/model provenance records. This reorganization does not enable that system, and does not commit raw streams or broker secrets.
+The [original scientific research protocols](research/shared/docs/research_protocol.md) and [version-specific conclusions](research/README.md) remain the authority for each historical experiment's scope. Subsequent versions must label new hypotheses and data as new work rather than retroactively changing a closed result.
