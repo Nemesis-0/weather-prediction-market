@@ -1,0 +1,32 @@
+{
+  "decision": "GO reported by owner via 2026-11-12 screenshot; full final independent report not embedded",
+  "reviewed_bytes": {
+    "docs/gate0/01_V4_RESEARCH_PROTOCOL_REVISED.md": {
+      "bytes": 32554,
+      "sha256": "ff59ef4d3d730da877550f7f9acc8c991eb416368732239fc95912bd63df70b5"
+    },
+    "docs/gate0/02_V4_ENGINEERING_DATA_CONTRACT_REVISED.md": {
+      "bytes": 26633,
+      "sha256": "ea9fcf181c46ab25b756db167ddef1cbbf9b0903a458a8c42f9d379827f80be6"
+    },
+    "docs/gate0/03_SOLMAX_REVIEW_GATES_REVISED.md": {
+      "bytes": 8550,
+      "sha256": "e8031fb476d3af24c095c164f9bc5b0ce59a6d56b94b84904fb3d61d82abbac5"
+    },
+    "docs/gate0/07_G0_NORMATIVE_AMENDMENTS.md": {
+      "bytes": 26067,
+      "sha256": "d68731f4250bc140cb757d9c4b3f46b609f3dd9040b3eeda3a6538298a9b57a7"
+    },
+    "docs/gate0/08_G0_ACCEPTANCE_MATRIX.md": {
+      "bytes": 11377,
+      "sha256": "43ac9e49d4bfe432ad0acf4acfb15630104baa2f165a0d6866f5dfe54b26fdaa"
+    },
+    "tests/g0_rev3_synthetic_cases.py": {
+      "bytes": 6264,
+      "sha256": "373048e30701be6580141c72851da147b98dbcd6b8d0d0b7e866db321f9eb14d"
+    }
+  },
+  "schema_version": 1,
+  "source_archive_filename": "V4_GATE0_REV3_SOLMAX_20261112.zip",
+  "source_archive_sha256": "f2a52cda9aa9f655e5df00268a60a861142acf6ea22b005b8e14f5efe92b1d80"
+}
