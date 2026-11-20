@@ -39,7 +39,7 @@ The largest apparent candidate was:
 - conservative NO probability: 0.6998210499699585;
 - reported margin: $0.6598210499699585 per contract.
 
-Sol Max Gate #3 returned **NO-GO**.
+Independent Review Gate #3 returned **NO-GO**.
 
 The decisive blocker was not quote mapping, arithmetic, or the frozen cost formula.
 The blocker was an omitted point-in-time settlement-source state:

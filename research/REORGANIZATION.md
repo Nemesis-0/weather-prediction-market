@@ -21,3 +21,15 @@
 ## Installation safeguards
 
 The ZIP installer checks the original file digests and a clean original Git working tree, archives the original tracked files, performs file-by-file moves, checks final file digests and tests, and rolls back to the original branch on install failure. It **never** pushes to GitHub; publishing is a separate human-confirmed operation.
+
+## Public reviewer-neutral documentation revision (2026-11-20)
+
+This later publication-only revision normalizes three reviewer-specific internal
+file names and the associated review attributions to neutral terminology. It
+does not revise hypotheses, estimates, outcomes, market code, or the original
+Study 1 freeze manifest. For edited files, the migration ledger retains
+`original_sha256`, records `pre_public_normalization_sha256`, and validates the
+current public `new_sha256`. Three historical path keys are published as neutral
+aliases rather than their original internal labels. The separate moved-runtime
+manifest authenticates the editorially updated Study 1 protocol. Earlier Git
+commits remain in history; this is not historical erasure.

@@ -15,8 +15,8 @@
       "original_sha256": "4b69316f689f3620461e26d4dfef0bc0a41169f3962da15e40cd7d4136b859bf",
       "original_bytes": 8152,
       "new_path": "research/v3/docs/study1_final_frozen_protocol.md",
-      "runtime_sha256": "4b69316f689f3620461e26d4dfef0bc0a41169f3962da15e40cd7d4136b859bf",
-      "runtime_bytes": 8152
+      "runtime_sha256": "3b0cd02ed30ef39300c25744bae373c7a660bb8d00e328fbee972bf4b5e0dfe3",
+      "runtime_bytes": 8174
     },
     "docs/v3/legal/DailyTemperatureTermsandConditions_2026-10-06.pdf": {
       "original_sha256": "226826cb5d64cddc52c86b99a2e908f25ba48aa431f6c9ffe2c30e55731db511",
@@ -53,5 +53,6 @@
       "runtime_sha256": "9d686d1a9191f7b6cc1d57494d675549f48115506b7d823f9885ac2c1d20a844",
       "runtime_bytes": 25009
     }
-  }
+  },
+  "public_normalization_notice": "2026-11-20: reviewer-neutral editorial adjustment to public relocated protocol; original frozen digest is unchanged."
 }

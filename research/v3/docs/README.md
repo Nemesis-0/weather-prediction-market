@@ -51,8 +51,7 @@ is no longer current:
 - frozen pre-run protocols;
 - implementation and economic-kill contracts.
 
-Their purpose is to preserve what was specified and known at each stage. Some frozen
-Study 1 documents retain the historical internal label `Sol Max`; this denotes an
-independent adversarial review checkpoint. Those files are intentionally left unchanged
-so that frozen manifests and protocol provenance remain valid. Use the final domain
+Their purpose is to preserve what was specified and known at each stage. Study 1 review records are retained as historical audit evidence. Their
+public copies use reviewer-neutral terminology; original scientific freeze hashes
+and current public file hashes are recorded separately. Use the final domain
 closure for the present-tense project state.

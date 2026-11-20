@@ -6,8 +6,8 @@ Freeze parent: `b698f85`.
 
 The strategy-blind live acceptance run `20261006T151123Z` passed with 160/160
 planned adjacent-pair checks completed and zero structural failures. The final
-Sol Max gate then identified three implementation defects. Those defects are
-resolved before this freeze; see `study1_sol_max_final_gate_resolution_2026-10-06.md`.
+Independent Review gate then identified three implementation defects. Those defects are
+resolved before this freeze; see `study1_independent_review_final_gate_resolution_2026-10-06.md`.
 No basket cost, opportunity count, alpha, hypothetical fill, or PnL was
 inspected before this freeze.
 

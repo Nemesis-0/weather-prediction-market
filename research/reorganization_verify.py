@@ -65,8 +65,15 @@ def verify(root: Path) -> None:
         check(rec['new_path'], rec['new_sha256'], rec['new_bytes'])
         if rec['byte_identical']:
             unchanged += 1
-            if rec['new_sha256'] != rec['original_sha256']:
-                raise RuntimeError(f'False byte-identical claim: {old}')
+            # This flag records byte-identity at the historical reorganization,
+            # not equality of a later reviewer-neutral public copy.
+            historical_migration_sha = rec.get('pre_public_normalization_sha256', rec['new_sha256'])
+            if historical_migration_sha != rec['original_sha256']:
+                raise RuntimeError(f'False historical byte-identical claim: {old}')
+        prior = rec.get('pre_public_normalization_sha256')
+        if prior is not None:
+            if prior == rec['new_sha256'] or rec.get('public_normalization_revision') != '2026-11-20':
+                raise RuntimeError(f'Invalid public normalization lineage: {old}')
 
     for path, rec in extras.items():
         check(path, rec['sha256'], rec['bytes'])

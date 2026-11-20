@@ -1,4 +1,4 @@
-# V3 Study 1 — Sol Max Final GO/NO-GO Resolution
+# V3 Study 1 — Independent Review Final GO/NO-GO Resolution
 
 Status: **required pre-freeze implementation repairs completed in this freeze candidate; confirmatory collection has not started**.
 

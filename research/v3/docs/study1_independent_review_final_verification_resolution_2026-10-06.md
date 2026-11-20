@@ -1,4 +1,4 @@
-# V3 Study 1 — Sol Max final implementation verification resolution (2026-10-06)
+# V3 Study 1 — Independent Review final implementation verification resolution (2026-10-06)
 
 The exact candidate commit `58bf64c5ebe3eeb9de7ff9f06841d5bb1a95f39d` received `FINAL GO: NO` for one remaining endpoint-input integrity defect. No scientific design choice was reopened.
 

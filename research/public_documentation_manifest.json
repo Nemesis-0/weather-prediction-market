@@ -1,7 +1,7 @@
 {
   "baseline_commit": "74f672b",
   "schema_version": 1,
-  "scope": "Post-reorganization public research documentation revision; historical migration_ledger.json remains unchanged. No scientific closure, original frozen protocol, historical results, model or IBKR code is edited.",
+  "scope": "Public research documentation revision; migration ledger is a reviewer-neutral public derivative, retaining historical hashes and editorial lineage. No scientific result or original frozen protocol identity is rewritten.",
   "updated_files": {
     "DATA_POLICY.md": {
       "current_bytes": 4111,
@@ -22,8 +22,8 @@
       "migration_sha256": "71c146381eeadee9a1954d85de59d120527ab97cace3349c55ad4d73c1c6aa42"
     },
     "research/reorganization_verify.py": {
-      "current_bytes": 4247,
-      "current_sha256": "5c12ac32e39415979894dcacace80baf56c1fb33a9c0443675ac816b19ba7f75",
+      "current_bytes": 4789,
+      "current_sha256": "3addc42dce1c8cdc57c3fd2429a94dbf643cb26e41cf8ce2f53627df10fd26c1",
       "migration_bytes": 2455,
       "migration_sha256": "dd652860bcec6ac4df88534b79042dbe55d1322aeff561023abcae002e5c14fa"
     },

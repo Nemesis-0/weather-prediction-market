@@ -3,7 +3,7 @@
 ## Status and boundary
 
 This document governs the bulk historical source-construction stage after
-Sol Max Gate #1 GO and after the bounded 8-date historical source-feasibility
+Independent Review Gate #1 GO and after the bounded 8-date historical source-feasibility
 probe passed.
 
 This stage is **pre-model**. It does not authorize probability inference,
@@ -86,4 +86,4 @@ Bulk backfill and later model-ready construction may proceed until the dataset
 is complete enough to fit M0.
 
 Before treating any M0 performance or probability as scientific evidence, stop
-and submit the historical/model-ready dataset to Sol Max Gate #2.
+and submit the historical/model-ready dataset to Independent Review Gate #2.

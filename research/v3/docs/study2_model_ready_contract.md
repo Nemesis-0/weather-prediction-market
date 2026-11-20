@@ -31,7 +31,7 @@ an unambiguous UTC instant and checked against the IEM Chicago-local
 
 That METAR issue timestamp is the historical point-in-time availability proxy.
 This convention, and the lack of reconstructed original receive latency, must
-be reviewed at Sol Max Gate #2.
+be reviewed at Independent Review Gate #2.
 
 Naive local time is never used as a unique key. This preserves both 01:53
 observations on fall-DST days.
@@ -93,6 +93,6 @@ After this table and its QC artifacts are reviewed internally, stop.
 
 The next high-capacity review is:
 
-**SOL MAX GATE #2 — HISTORICAL / MODEL-READY DATA GATE**
+**INDEPENDENT REVIEW GATE #2 — HISTORICAL / MODEL-READY DATA GATE**
 
 No M0 scientific inference is authorized before Gate #2 GO.

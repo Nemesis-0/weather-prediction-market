@@ -104,7 +104,7 @@ If `g > 0`:
 `APPARENT_POSITIVE_CONSERVATIVE_MARGIN_GATE3_REQUIRED`.
 
 A positive row is **not** an authorization to trade and is not yet a claim of
-executable alpha. The protocol must stop for Sol Max Gate #3.
+executable alpha. The protocol must stop for Independent Review Gate #3.
 
 If a fresh session has no positive rows:
 `NO_POSITIVE_MARGIN_IN_THIS_FRESH_SESSION`.

@@ -5,7 +5,7 @@ Study 2 capture session. It does not place orders, size positions, retune M0,
 retune support rules, or select only favorable rows.
 
 Positive conservative margin is only an *apparently positive candidate* and
-requires Sol Max Gate #3 before any shadow/freeze progression. A session with
+requires Independent Review Gate #3 before any shadow/freeze progression. A session with
 no positive rows is not by itself a universal ECONOMIC_KILL across all future
 market states.
 """
@@ -683,7 +683,7 @@ def screen_session(
         session_decision = "APPARENT_POSITIVE_CONSERVATIVE_MARGIN_GATE3_REQUIRED"
         next_boundary = (
             "STOP. Do not shadow-retune, build order lifecycle, or trade. "
-            "Package the first positive candidate(s) for Sol Max Gate #3."
+            "Package the first positive candidate(s) for Independent Review Gate #3."
         )
     else:
         session_decision = "NO_POSITIVE_MARGIN_IN_THIS_FRESH_SESSION"

@@ -1,4 +1,4 @@
-# V3 Study 1 — Sol Max Pre-Freeze Resolution
+# V3 Study 1 — Independent Review Pre-Freeze Resolution
 
 Status: **remediation candidate; untouched evaluation has not started**.
 

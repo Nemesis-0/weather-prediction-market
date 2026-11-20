@@ -65,10 +65,10 @@ Canonical V3 records now include:
 - [`v3/api_capability_audit.md`](../../v3/docs/api_capability_audit.md) - infrastructure audit retained for reproducibility.
 
 Pre-freeze, remediation, acceptance, and adversarial-review documents are kept as
-provenance but are not recommended as first-entry reading for the project. Some frozen
-Study 1 records preserve the historical internal label `Sol Max`; in this public closeout,
-that label should be read simply as an independent adversarial review checkpoint. Original freeze manifests are not rewritten. Some document hyperlinks were mechanically
-retargeted; the migration ledger records which bytes changed.
+provenance but are not recommended as first-entry reading for the project. Study 1 review records are retained as historical audit evidence.
+The public documentation uses reviewer-neutral terminology; original freeze
+hashes remain recorded separately from the current public file hashes.
+Some hyperlinks were updated, with revisions accounted for in the migration ledger.
 
 ## Result and data guides
 
